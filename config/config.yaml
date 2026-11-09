@@ -1,0 +1,31 @@
+# 环境配置（YAML 格式）
+# 跨境电商精细化管理系统
+
+base_url: "http://10.200.15.3/"
+
+# API 相关配置
+api:
+  base_url: "http://10.200.15.3:10002/"
+  auth_prefix: "auth"
+  timeout: 30
+  retry_times: 3
+  retry_interval: 1.0
+
+# UI 相关配置
+ui:
+  base_url: "http://10.200.15.3/"
+  browser: "chromium"
+  headless: true
+  timeout: 30000
+  viewport:
+    width: 1920
+    height: 1080
+
+# 日志配置
+logging:
+  level: "INFO"
+  file: "reports/test.log"
+
+# 报告配置
+report:
+  allure_dir: "reports/allure-results"

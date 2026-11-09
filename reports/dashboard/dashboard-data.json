@@ -1,0 +1,313 @@
+{
+  "summary": {
+    "total_runs": 14,
+    "total_cases": 70,
+    "total_passed": 45,
+    "total_failed": 0,
+    "total_broken": 25,
+    "total_skipped": 0,
+    "latest_pass_rate": 37.5
+  },
+  "reports": [
+    {
+      "timestamp": "26-07-17_10-36-25",
+      "datetime": "2026-07-17 10:36:31",
+      "start_time": "10:35:27",
+      "duration_sec": 57.0,
+      "statistic": {
+        "failed": 0,
+        "broken": 10,
+        "skipped": 0,
+        "passed": 6,
+        "unknown": 0,
+        "total": 16
+      },
+      "environment": {
+        "Environment": "dev",
+        "Base_URL": "http://10.200.15.3/",
+        "Browser": "chromium",
+        "Headless": "True",
+        "Python": "3.12",
+        "Timestamp": "2026-07-17T10:35:27.636195"
+      }
+    },
+    {
+      "timestamp": "26-07-17_10-34-53",
+      "datetime": "2026-07-17 10:35:00",
+      "start_time": "10:34:52",
+      "duration_sec": 0.3,
+      "statistic": {
+        "failed": 0,
+        "broken": 0,
+        "skipped": 0,
+        "passed": 6,
+        "unknown": 0,
+        "total": 6
+      },
+      "environment": {
+        "Environment": "dev",
+        "Base_URL": "http://10.200.15.3/",
+        "Browser": "chromium",
+        "Headless": "True",
+        "Python": "3.12",
+        "Timestamp": "2026-07-17T10:34:52.815668"
+      }
+    },
+    {
+      "timestamp": "26-07-17_10-28-41",
+      "datetime": "2026-07-17 10:28:48",
+      "start_time": "",
+      "duration_sec": 0.0,
+      "statistic": {
+        "failed": 0,
+        "broken": 0,
+        "skipped": 0,
+        "passed": 0,
+        "unknown": 0,
+        "total": 0
+      },
+      "environment": {
+        "Environment": "dev",
+        "Base_URL": "http://10.200.15.3/",
+        "Browser": "chromium",
+        "Headless": "True",
+        "Python": "3.12",
+        "Timestamp": "2026-07-17T10:28:41.824150"
+      }
+    },
+    {
+      "timestamp": "26-07-17_10-20-59",
+      "datetime": "2026-07-17 10:21:08",
+      "start_time": "10:20:13",
+      "duration_sec": 45.0,
+      "statistic": {
+        "failed": 0,
+        "broken": 7,
+        "skipped": 0,
+        "passed": 0,
+        "unknown": 0,
+        "total": 7
+      },
+      "environment": {
+        "Environment": "dev",
+        "Base_URL": "http://10.200.15.3/",
+        "Browser": "chromium",
+        "Headless": "True",
+        "Python": "3.12",
+        "Timestamp": "2026-07-17T10:20:04.567331"
+      }
+    },
+    {
+      "timestamp": "26-07-17_10-19-26",
+      "datetime": "2026-07-17 10:19:35",
+      "start_time": "10:19:25",
+      "duration_sec": 0.4,
+      "statistic": {
+        "failed": 0,
+        "broken": 0,
+        "skipped": 0,
+        "passed": 6,
+        "unknown": 0,
+        "total": 6
+      },
+      "environment": {
+        "Environment": "dev",
+        "Base_URL": "http://10.200.15.3/",
+        "Browser": "chromium",
+        "Headless": "True",
+        "Python": "3.12",
+        "Timestamp": "2026-07-17T10:19:25.885307"
+      }
+    },
+    {
+      "timestamp": "26-07-17_10-12-49",
+      "datetime": "2026-07-17 10:12:55",
+      "start_time": "",
+      "duration_sec": 0.0,
+      "statistic": {
+        "failed": 0,
+        "broken": 0,
+        "skipped": 0,
+        "passed": 0,
+        "unknown": 0,
+        "total": 0
+      },
+      "environment": {
+        "Environment": "dev",
+        "Base_URL": "http://10.200.15.3/",
+        "Browser": "chromium",
+        "Headless": "True",
+        "Python": "3.12",
+        "Timestamp": "2026-07-17T10:12:48.464907"
+      }
+    },
+    {
+      "timestamp": "26-07-15_16-42-00",
+      "datetime": "2026-07-15 16:42:07",
+      "start_time": "16:41:59",
+      "duration_sec": 0.3,
+      "statistic": {
+        "failed": 0,
+        "broken": 0,
+        "skipped": 0,
+        "passed": 6,
+        "unknown": 0,
+        "total": 6
+      },
+      "environment": {
+        "Environment": "dev",
+        "Base_URL": "http://10.200.15.3/",
+        "Browser": "chromium",
+        "Headless": "True",
+        "Python": "3.12",
+        "Timestamp": "2026-07-15T16:41:59.889155"
+      }
+    },
+    {
+      "timestamp": "26-07-15_16-01-49",
+      "datetime": "2026-07-15 16:02:02",
+      "start_time": "16:01:49",
+      "duration_sec": 0.3,
+      "statistic": {
+        "failed": 0,
+        "broken": 0,
+        "skipped": 0,
+        "passed": 6,
+        "unknown": 0,
+        "total": 6
+      },
+      "environment": {
+        "Environment": "dev",
+        "Base_URL": "http://10.200.15.3/",
+        "Browser": "chromium",
+        "Headless": "True",
+        "Python": "3.12",
+        "Timestamp": "2026-07-15T16:01:49.408492"
+      }
+    },
+    {
+      "timestamp": "26-07-15_16-01-01",
+      "datetime": "2026-07-15 16:01:07",
+      "start_time": "16:01:00",
+      "duration_sec": 0.3,
+      "statistic": {
+        "failed": 0,
+        "broken": 0,
+        "skipped": 0,
+        "passed": 6,
+        "unknown": 0,
+        "total": 6
+      },
+      "environment": {
+        "Environment": "dev",
+        "Base_URL": "http://10.200.15.3/",
+        "Browser": "chromium",
+        "Headless": "True",
+        "Python": "3.12",
+        "Timestamp": "2026-07-15T16:01:00.721006"
+      }
+    },
+    {
+      "timestamp": "26-07-15_15-59-38",
+      "datetime": "2026-07-15 15:59:45",
+      "start_time": "",
+      "duration_sec": 0.0,
+      "statistic": {
+        "failed": 0,
+        "broken": 0,
+        "skipped": 0,
+        "passed": 0,
+        "unknown": 0,
+        "total": 0
+      },
+      "environment": {
+        "Environment": "dev",
+        "Base_URL": "http://10.200.15.3/",
+        "Browser": "chromium",
+        "Headless": "True",
+        "Python": "3.12",
+        "Timestamp": "2026-07-15T15:59:37.655304"
+      }
+    },
+    {
+      "timestamp": "26-07-15_15-54-51",
+      "datetime": "2026-07-15 15:54:57",
+      "start_time": "",
+      "duration_sec": 0.0,
+      "statistic": {
+        "failed": 0,
+        "broken": 0,
+        "skipped": 0,
+        "passed": 0,
+        "unknown": 0,
+        "total": 0
+      },
+      "environment": {
+        "Environment": "dev",
+        "Base_URL": "http://10.200.15.3/",
+        "Browser": "chromium",
+        "Headless": "True",
+        "Python": "3.12",
+        "Timestamp": "2026-07-15T15:54:50.892080"
+      }
+    },
+    {
+      "timestamp": "26-07-15_15-52-30",
+      "datetime": "2026-07-15 15:52:37",
+      "start_time": "15:52:30",
+      "duration_sec": 0.1,
+      "statistic": {
+        "failed": 0,
+        "broken": 0,
+        "skipped": 0,
+        "passed": 1,
+        "unknown": 0,
+        "total": 1
+      },
+      "environment": {
+        "Environment": "",
+        "Base_URL": "",
+        "Browser": "",
+        "Headless": "",
+        "Python": "",
+        "Timestamp": ""
+      }
+    },
+    {
+      "timestamp": "26-07-15_15-40-22",
+      "datetime": "2026-07-15 15:40:28",
+      "start_time": "",
+      "duration_sec": 0.0,
+      "statistic": {
+        "failed": 0,
+        "broken": 0,
+        "skipped": 0,
+        "passed": 0,
+        "unknown": 0,
+        "total": 0
+      },
+      "environment": {
+        "Environment": "",
+        "Base_URL": "",
+        "Browser": "",
+        "Headless": "",
+        "Python": "",
+        "Timestamp": ""
+      }
+    },
+    {
+      "timestamp": "26-07-15_15-13-03",
+      "datetime": "26-07-15 15-13-03",
+      "duration_sec": 149.6,
+      "statistic": {
+        "failed": 0,
+        "broken": 8,
+        "skipped": 0,
+        "passed": 8,
+        "unknown": 0,
+        "total": 16
+      },
+      "environment": {}
+    }
+  ]
+}

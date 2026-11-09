@@ -1,0 +1,11 @@
+# 混合自动化测试框架依赖
+pytest>=8.0
+pytest-xdist>=3.0          # 并行执行
+pytest-allure-adaptor>=1.7.10  # Allure 报告
+allure-pytest>=2.13.0      # Allure pytest 集成
+requests>=2.31.0           # HTTP 客户端
+playwright>=1.40.0         # 浏览器自动化
+pydantic>=2.0              # 数据模型与配置校验
+pydantic-settings>=2.0     # 配置管理
+pyyaml>=6.0                # YAML 配置解析
+faker>=20.0                # 测试数据生成

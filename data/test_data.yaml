@@ -1,0 +1,31 @@
+# API 测试数据
+# 用于数据驱动的测试用例
+
+# 用户测试数据
+users:
+  valid:
+    username: "test_user_001"
+    password: "TestP@ssw0rd"
+    email: "test001@example.com"
+
+  short_password:
+    username: "test_user_002"
+    password: "12"
+    email: "test002@example.com"
+
+  empty_username:
+    username: ""
+    password: "ValidP@ss123"
+
+  special_chars:
+    username: "test_<script>"
+    password: "P@ss<script>"
+
+# 登录测试数据
+login:
+  valid:
+    username: "admin"
+    password: "admin123"
+  invalid:
+    username: "admin"
+    password: "wrong_password"

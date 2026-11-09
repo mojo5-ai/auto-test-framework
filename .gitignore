@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+*.egg
+dist/
+build/
+.eggs/
+
+# Pytest
+.pytest_cache/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Allure reports (generated)
+reports/allure-reports/
+reports/allure-results/
+
+# Node.js dependencies
+node_modules/
+package-lock.json
+
+# Hermes local config
+.hermes/
+
+# OS
+.DS_Store
+Thumbs.db
