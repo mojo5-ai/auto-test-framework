@@ -6,7 +6,7 @@
 - 成功登录流程
 - 失败登录流程
 - 表单校验
-- 记住我功能
+- 记住密码功能
 
 使用 Allure 报告标注功能模块。
 """
@@ -100,18 +100,18 @@ class TestLoginFlow:
 
 
 @allure.feature("登录功能")
-@allure.story("记住我功能")
+@allure.story("记住密码功能")
 @pytest.mark.ui
 class TestRememberMe:
 
-    @allure.title("记住我复选框功能")
-    @pytest.mark.skip(reason="登录页已核实无记住我复选框（2026-11-18 检查页面 DOM），待开发提供后恢复")
+    @allure.title("记住密码复选框功能")
+    @pytest.mark.skip(reason="登录页已核实无记住密码复选框（2026-11-18 检查页面 DOM），待开发提供后恢复")
     def test_remember_me_checkbox(self, login_page: LoginPage):
-        """验证：记住我复选框可勾选"""
-        with allure.step("勾选记住我"):
+        """验证：记住密码复选框可勾选"""
+        with allure.step("勾选记住密码"):
             login_page.locator.find(login_page._resolve(login_page._remember_checkbox)).check()
 
         with allure.step("验证复选框已选中"):
             checkbox = login_page.locator.find(login_page._resolve(login_page._remember_checkbox))
-            assert checkbox.is_checked(), "记住我复选框应处于选中状态"
-            allure.attach("复选框已勾选", name="记住我状态")
+            assert checkbox.is_checked(), "记住密码复选框应处于选中状态"
+            allure.attach("复选框已勾选", name="记住密码状态")
