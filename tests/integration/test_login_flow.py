@@ -20,8 +20,8 @@ from utils.logger import get_logger
 
 logger = get_logger(__name__)
 
-# 参数化数据集（从 data/test_data.yaml 读取，模块导入期加载）
-INTEGRATION_LOGIN_CASES = load_test_data("integration_login_cases")
+# 参数化数据集（从 data/test_login_flow_data.yaml 读取，模块导入期加载）
+INTEGRATION_LOGIN_CASES = load_test_data("test_login_flow", "integration_login_cases")
 
 
 @allure.feature("登录全流程")

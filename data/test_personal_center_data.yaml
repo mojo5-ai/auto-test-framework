@@ -1,0 +1,9 @@
+# 测试数据：tests/ui/test_personal_center.py
+# 由 utils.helpers.load_test_data("test_personal_center", section) 读取
+
+# UI 个人中心用例
+ui_personal_center_cases:
+  - id: personal_center_account_id
+    username: "admin_01"
+    password: "Mugroup123"
+    desc: "个人中心账号id与登录账号一致"

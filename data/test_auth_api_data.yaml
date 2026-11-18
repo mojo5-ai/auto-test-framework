@@ -1,0 +1,31 @@
+# 测试数据：tests/api/test_auth_api.py
+# 由 utils.helpers.load_test_data("test_auth_api", section) 读取
+
+# API 登录参数化用例
+# expect_fail: true 断言失败；false 断言成功；null 仅验证响应结构（对照组）
+api_login_cases:
+  - id: empty_password
+    username: "admin"
+    password: ""
+    expect_fail: true
+    desc: "空密码"
+  - id: empty_username
+    username: ""
+    password: "admin123"
+    expect_fail: true
+    desc: "空用户名"
+  - id: wrong_password
+    username: "admin"
+    password: "wrong_password_123"
+    expect_fail: true
+    desc: "错误密码"
+  - id: nonexistent_user
+    username: "nonexistent_user"
+    password: "admin123"
+    expect_fail: true
+    desc: "不存在的用户"
+  - id: valid_credentials_contract
+    username: "admin_01"
+    password: "Mugroup123"
+    expect_fail: null
+    desc: "正确凭证（对照组，仅验证响应结构）"

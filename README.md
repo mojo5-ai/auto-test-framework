@@ -10,7 +10,7 @@
 - 🔄 **环境切换** — 通过 `--env dev|staging|prod` 一行切换目标环境
 - 📊 **Allure 报告** — 自动生成 HTML 报告 + 历史趋势仪表盘
 - 📸 **失败截图** — UI 测试失败时自动截图并附加到报告
-- 🎲 **数据驱动** — 测试数据集中在 `data/test_data.yaml`，通过 `pytest.mark.parametrize` 参数化注入用例（`utils.helpers.load_test_data()` 在模块导入期读取）；另支持 Faker 动态生成数据
+- 🎲 **数据驱动** — 测试数据按用例文件一一对应放在 `data/`（如 `test_login.py` → `test_login_data.yaml`），通过 `pytest.mark.parametrize` 参数化注入用例（`utils.helpers.load_test_data(用例名, 段名)` 在模块导入期读取）；另支持 Faker 动态生成数据
 - 🏷️ **标记体系** — `smoke / regression / api / ui / integration` 灵活筛选
 - ⚡ **并行执行** — 集成 pytest-xdist，大幅缩短运行时间
 - ⏳ **快速等待策略** — 导航用 `domcontentloaded` 即载即用（弃 networkidle）、元素超时 10s 快速失败、断言单次轮询（login 页单用例约 1s）
@@ -65,8 +65,11 @@ auto-test-framework/
 │   ├── data_generator.py   #   测试数据生成
 │   ├── allure_report.py    #   Allure 辅助
 │   └── report_dashboard.py #   仪表盘生成
-├── data/
-│   └── test_data.yaml      # 测试数据 + 参数化数据集（id/desc/预期结果）
+├── data/                   # 测试数据（按用例文件一一对应）
+│   ├── test_login_data.yaml          #   ← tests/ui/test_login.py
+│   ├── test_personal_center_data.yaml #   ← tests/ui/test_personal_center.py
+│   ├── test_auth_api_data.yaml       #   ← tests/api/test_auth_api.py
+│   └── test_login_flow_data.yaml     #   ← tests/integration/test_login_flow.py
 ├── reports/                # 测试产物（自动生成）
 │   ├── allure-results/     #   Allure 原始结果
 │   ├── allure-reports/     #   Allure HTML 报告（按时间戳）
@@ -264,8 +267,10 @@ report:
 
 ### 1. 在 YAML 中定义参数化数据
 
+数据文件与测试文件同名（`test_login.py` → `data/test_login_data.yaml`）：
+
 ```yaml
-# data/test_data.yaml
+# data/test_login_data.yaml
 ui_login_boundary_cases:
   - id: empty_username        # 生成测试 ID：test_login_xxx[empty_username]
     username: ""
@@ -288,7 +293,8 @@ import pytest
 from api.endpoints.auth_api import AuthApi
 from utils.helpers import load_test_data
 
-API_LOGIN_CASES = load_test_data("api_login_cases")   # 模块导入期读取 YAML
+# 模块导入期读取 data/test_auth_api_data.yaml
+API_LOGIN_CASES = load_test_data("test_auth_api", "api_login_cases")
 
 @pytest.mark.api
 class TestLoginApi:
@@ -309,7 +315,8 @@ import pytest
 from ui.pages.login_page import LoginPage
 from utils.helpers import load_test_data
 
-UI_LOGIN_BOUNDARY_CASES = load_test_data("ui_login_boundary_cases")
+# 模块导入期读取 data/test_login_data.yaml
+UI_LOGIN_BOUNDARY_CASES = load_test_data("test_login", "ui_login_boundary_cases")
 
 @pytest.mark.ui
 class TestLoginFlow:
@@ -322,7 +329,7 @@ class TestLoginFlow:
             login_page.assert_login_failed(case.get("expected_error"))
 ```
 
-> 参数化数据需要在模块导入期拿到，因此不能用 fixture，统一通过 `load_test_data()` 读取；
+> 参数化数据需要在模块导入期拿到，因此不能用 fixture，统一通过 `load_test_data(用例名, 段名)` 读取；
 > fixture（如 `login_page`、`auth_api`）在根目录 `conftest.py` 中定义，测试函数按参数名直接注入。
 
 ---

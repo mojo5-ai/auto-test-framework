@@ -11,8 +11,11 @@
     login_page.assert_login_success()
 """
 
-from playwright.sync_api import Page
+import re
 
+from playwright.sync_api import Page, expect
+
+from config.settings import settings
 from ui.pages.base_page import BasePage
 from utils.logger import get_logger
 
@@ -81,6 +84,36 @@ class LoginPage(BasePage):
         # 等待页面响应
         self.wait_for_load()
         return self
+
+    def fill_password(self, password: str) -> "LoginPage":
+        """仅输入密码（fill 自动清空原有内容，用于失败后修正重试场景）"""
+        self.locator.find(self._resolve(self._password_input)).fill(password)
+        return self
+
+    def click_login(self) -> "LoginPage":
+        """点击登录按钮并等待页面响应"""
+        self.locator.find(self._resolve(self._login_button)).click()
+        self.wait_for_load()
+        return self
+
+    def assert_on_login_page(self):
+        """断言当前仍停留在登录页"""
+        self.assert_that.url_contains("login")
+        logger.info("✅ 仍在登录页")
+
+    def assert_left_login_page(self):
+        """断言已离开登录页（跳转进入系统）"""
+        # [待验证] 首页具体 URL 未核实，用"不再包含 /login"规避硬编码
+        expect(self.page).not_to_have_url(
+            re.compile(r"/login"), timeout=settings.ui.timeout
+        )
+        logger.info("✅ 已离开登录页: %s", self.page.url)
+
+    def assert_login_form_hidden(self):
+        """断言登录表单已消失（跳转后旧表单不可见）"""
+        self.assert_that.element_hidden(
+            self._resolve(self._username_input), desc="登录表单"
+        )
 
     def login_with_remember(self, username: str, password: str) -> "LoginPage":
         """勾选"记住密码"后登录"""

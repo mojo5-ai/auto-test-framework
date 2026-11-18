@@ -1,0 +1,41 @@
+# 测试数据：tests/ui/test_login.py
+# 由 utils.helpers.load_test_data("test_login", section) 读取
+# 每条用例的 id 用于生成 pytest 测试 ID
+
+# UI 登录成功用例
+ui_login_valid_cases:
+  - id: valid_admin
+    username: "admin_01"
+    password: "Mugroup123"
+
+# UI 登录失败用例
+ui_login_invalid_cases:
+  - id: wrong_password
+    username: "admin"
+    password: "wrong_password"
+
+# UI 登录边界值用例
+ui_login_boundary_cases:
+  - id: empty_username
+    username: ""
+    password: "password123"
+    expected_error: "账号"   # 页面真实提示：登录账号不能为空
+    desc: "空用户名"
+  - id: empty_password
+    username: "admin"
+    password: ""
+    expected_error: "密码"   # 页面真实提示：密码不能为空
+    desc: "空密码"
+  - id: short_password
+    username: "admin"
+    password: "123"
+    expected_error: null      # 后端统一提示，不匹配具体文案
+    desc: "短密码"
+
+# UI 登录失败后重试用例
+ui_login_retry_cases:
+  - id: login_retry_after_failure
+    username: "admin_01"
+    wrong_password: "wrong_password"
+    password: "Mugroup123"
+    desc: "先错后对，验证失败后可立即重试成功"

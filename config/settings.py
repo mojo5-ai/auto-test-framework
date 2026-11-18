@@ -120,7 +120,8 @@ class Settings(BaseSettings):
             self（当前实例，字段已刷新）
         """
         fresh = self.load_from_yaml(yaml_path)
-        for field_name in self.model_fields:
+        # Pydantic ≥2.11：model_fields 需从类访问，实例访问已弃用（PydanticDeprecatedSince211）
+        for field_name in type(self).model_fields:
             setattr(self, field_name, getattr(fresh, field_name))
         return self
 

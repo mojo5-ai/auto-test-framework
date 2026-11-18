@@ -20,14 +20,17 @@ from utils.logger import get_logger
 logger = get_logger(__name__)
 
 
-def load_test_data(section: Optional[str] = None) -> Any:
+def load_test_data(source: str, section: Optional[str] = None) -> Any:
     """
-    读取 data/test_data.yaml 中的测试数据
+    读取 data/{source}_data.yaml 中的测试数据
 
+    数据文件按测试用例文件一一对应（如 test_login.py → test_login_data.yaml）。
     主要用于 pytest.mark.parametrize：参数化需要在模块导入期拿到数据，
     不能依赖 fixture，因此提供该函数在模块级读取。
 
     Args:
+        source: 测试用例文件名（不含 .py 后缀），如 "test_login"
+                对应数据文件 data/test_login_data.yaml
         section: 顶层数据键，如 "ui_login_boundary_cases"；
                  None 时返回整个数据字典
 
@@ -37,7 +40,7 @@ def load_test_data(section: Optional[str] = None) -> Any:
     Usage:
         from utils.helpers import load_test_data
 
-        CASES = load_test_data("ui_login_boundary_cases")
+        CASES = load_test_data("test_login", "ui_login_boundary_cases")
 
         @pytest.mark.parametrize("case", CASES, ids=lambda c: c["id"])
         def test_xxx(case):
@@ -46,7 +49,7 @@ def load_test_data(section: Optional[str] = None) -> Any:
     # 延迟导入，避免模块级循环依赖
     from config.settings import settings
 
-    data_path = settings.project_root / "data" / "test_data.yaml"
+    data_path = settings.project_root / "data" / f"{source}_data.yaml"
     empty: Any = {} if section is None else []
     if not data_path.exists():
         logger.warning("测试数据文件不存在: %s", data_path)

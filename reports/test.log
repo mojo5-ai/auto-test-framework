@@ -4611,3 +4611,1253 @@
 2026-11-18 13:51:48,027 [INFO] conftest (conftest.py:334): 📋 报告元数据已保存: C:\Users\Administrator\Desktop\auto-test-framework\reports\allure-reports\26-11-18_13-51-45\report.json
 2026-11-18 13:51:48,036 [INFO] utils.report_dashboard (report_dashboard.py:140): ✅ 仪表盘已生成: C:\Users\Administrator\Desktop\auto-test-framework\reports\dashboard\index.html
 2026-11-18 13:51:48,037 [INFO] utils.report_dashboard (report_dashboard.py:141):    共 43 份历史报告, 283 个测试用例, 最新通过率 87.5%
+2026-11-18 15:36:35,589 [INFO] conftest (conftest.py:152): 📁 Allure 结果目录已重置: C:\Users\Administrator\Desktop\auto-test-framework\reports\allure-results
+2026-11-18 15:36:35,594 [INFO] conftest (conftest.py:193): 📜 已从 26-11-18_13-51-45 复制历史趋势数据
+2026-11-18 15:36:35,595 [INFO] conftest (conftest.py:281): 📝 Allure 环境信息已写入: C:\Users\Administrator\Desktop\auto-test-framework\reports\allure-results\environment.properties
+2026-11-18 15:36:35,595 [INFO] conftest (conftest.py:164): 🚀 测试会话启动 — 环境: dev, 目标: http://10.200.15.3/
+2026-11-18 15:36:35,691 [INFO] conftest (conftest.py:366): ============================================================
+2026-11-18 15:36:35,691 [INFO] conftest (conftest.py:367): 🧪 开始测试: test_login_retry_after_failure[login_retry_after_failure]
+2026-11-18 15:36:35,692 [INFO] conftest (conftest.py:369):    描述: 验证：首次用错误密码登录失败后，修正密码可立即重新登录成功
+2026-11-18 15:36:36,001 [INFO] ui.browser (browser.py:99): 启动浏览器: type=chromium, headless=False, channel=chrome
+2026-11-18 15:36:36,422 [INFO] ui.browser (browser.py:125): 新页面已创建，viewport=None
+2026-11-18 15:36:36,424 [INFO] ui.pages.base_page (base_page.py:69): 导航到: http://10.200.15.3/login
+2026-11-18 15:36:37,319 [INFO] ui.pages.login_page (login_page.py:75): 登录操作: username=admin_01
+2026-11-18 15:36:37,386 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#loginId
+2026-11-18 15:36:37,608 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#password
+2026-11-18 15:36:37,822 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-btn-primary
+2026-11-18 15:36:38,077 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-notification-notice
+2026-11-18 15:36:38,278 [INFO] ui.assertions (assertions.py:71): ✅ 错误提示 可见
+2026-11-18 15:36:38,278 [INFO] ui.pages.login_page (login_page.py:144): ✅ 登录失败验证成功
+2026-11-18 15:36:38,496 [INFO] conftest (conftest.py:450): 📸 失败截图: C:\Users\Administrator\Desktop\auto-test-framework\reports\screenshots\FAILED_test_login_retry_after_failure[login_retry_after_failure]_20261118_153638.png
+2026-11-18 15:36:38,504 [INFO] conftest (conftest.py:377): ✅ 测试结束: test_login_retry_after_failure[login_retry_after_failure]
+2026-11-18 15:36:38,742 [INFO] ui.browser (browser.py:155): 浏览器资源已释放
+2026-11-18 15:36:38,748 [INFO] conftest (conftest.py:204): 🏁 测试会话结束 — 退出码: 1
+2026-11-18 15:36:38,749 [INFO] conftest (conftest.py:239): 📊 正在生成 Allure 报告...
+2026-11-18 15:36:38,749 [INFO] conftest (conftest.py:240):    结果目录: C:\Users\Administrator\Desktop\auto-test-framework\reports\allure-results
+2026-11-18 15:36:38,749 [INFO] conftest (conftest.py:241):    报告目录: C:\Users\Administrator\Desktop\auto-test-framework\reports\allure-reports\26-11-18_15-36-38
+2026-11-18 15:36:41,307 [INFO] conftest (conftest.py:254): ✅ Allure 报告生成成功: C:\Users\Administrator\Desktop\auto-test-framework\reports\allure-reports\26-11-18_15-36-38
+2026-11-18 15:36:41,308 [INFO] conftest (conftest.py:334): 📋 报告元数据已保存: C:\Users\Administrator\Desktop\auto-test-framework\reports\allure-reports\26-11-18_15-36-38\report.json
+2026-11-18 15:36:41,317 [INFO] utils.report_dashboard (report_dashboard.py:140): ✅ 仪表盘已生成: C:\Users\Administrator\Desktop\auto-test-framework\reports\dashboard\index.html
+2026-11-18 15:36:41,317 [INFO] utils.report_dashboard (report_dashboard.py:141):    共 44 份历史报告, 284 个测试用例, 最新通过率 0.0%
+2026-11-18 15:38:54,508 [INFO] conftest (conftest.py:152): 📁 Allure 结果目录已重置: C:\Users\Administrator\Desktop\auto-test-framework\reports\allure-results
+2026-11-18 15:38:54,513 [INFO] conftest (conftest.py:193): 📜 已从 26-11-18_15-36-38 复制历史趋势数据
+2026-11-18 15:38:54,514 [INFO] conftest (conftest.py:281): 📝 Allure 环境信息已写入: C:\Users\Administrator\Desktop\auto-test-framework\reports\allure-results\environment.properties
+2026-11-18 15:38:54,514 [INFO] conftest (conftest.py:164): 🚀 测试会话启动 — 环境: dev, 目标: http://10.200.15.3/
+2026-11-18 15:38:54,611 [INFO] conftest (conftest.py:366): ============================================================
+2026-11-18 15:38:54,611 [INFO] conftest (conftest.py:367): 🧪 开始测试: test_login_retry_after_failure[login_retry_after_failure]
+2026-11-18 15:38:54,611 [INFO] conftest (conftest.py:369):    描述: 验证：首次用错误密码登录失败后，修正密码可立即重新登录成功
+2026-11-18 15:38:54,882 [INFO] ui.browser (browser.py:99): 启动浏览器: type=chromium, headless=False, channel=chrome
+2026-11-18 15:38:55,243 [INFO] ui.browser (browser.py:125): 新页面已创建，viewport=None
+2026-11-18 15:38:55,244 [INFO] ui.pages.base_page (base_page.py:69): 导航到: http://10.200.15.3/login
+2026-11-18 15:38:56,092 [INFO] ui.pages.login_page (login_page.py:75): 登录操作: username=admin_01
+2026-11-18 15:38:56,147 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#loginId
+2026-11-18 15:38:56,372 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#password
+2026-11-18 15:38:56,584 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-btn-primary
+2026-11-18 15:38:56,838 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-notification-notice
+2026-11-18 15:38:57,028 [INFO] ui.assertions (assertions.py:72): ✅ 错误提示 可见
+2026-11-18 15:38:57,028 [INFO] ui.pages.login_page (login_page.py:144): ✅ 登录失败验证成功
+2026-11-18 15:38:57,031 [INFO] ui.assertions (assertions.py:150): ✅ URL 包含: 'login'
+2026-11-18 15:38:57,031 [INFO] ui.pages.login_page (login_page.py:102): ✅ 仍在登录页
+2026-11-18 15:38:57,033 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#password
+2026-11-18 15:38:57,247 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-btn-primary
+2026-11-18 15:38:57,916 [INFO] ui.pages.login_page (login_page.py:110): ✅ 已离开登录页: http://10.200.15.3/
+2026-11-18 15:38:57,919 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#loginId
+2026-11-18 15:38:57,923 [INFO] ui.assertions (assertions.py:82): ✅ 登录表单 已隐藏
+2026-11-18 15:38:57,933 [INFO] conftest (conftest.py:377): ✅ 测试结束: test_login_retry_after_failure[login_retry_after_failure]
+2026-11-18 15:38:58,196 [INFO] ui.browser (browser.py:155): 浏览器资源已释放
+2026-11-18 15:38:58,203 [INFO] conftest (conftest.py:204): 🏁 测试会话结束 — 退出码: 0
+2026-11-18 15:38:58,204 [INFO] conftest (conftest.py:239): 📊 正在生成 Allure 报告...
+2026-11-18 15:38:58,204 [INFO] conftest (conftest.py:240):    结果目录: C:\Users\Administrator\Desktop\auto-test-framework\reports\allure-results
+2026-11-18 15:38:58,204 [INFO] conftest (conftest.py:241):    报告目录: C:\Users\Administrator\Desktop\auto-test-framework\reports\allure-reports\26-11-18_15-38-58
+2026-11-18 15:39:00,295 [INFO] conftest (conftest.py:254): ✅ Allure 报告生成成功: C:\Users\Administrator\Desktop\auto-test-framework\reports\allure-reports\26-11-18_15-38-58
+2026-11-18 15:39:00,296 [INFO] conftest (conftest.py:334): 📋 报告元数据已保存: C:\Users\Administrator\Desktop\auto-test-framework\reports\allure-reports\26-11-18_15-38-58\report.json
+2026-11-18 15:39:00,306 [INFO] utils.report_dashboard (report_dashboard.py:140): ✅ 仪表盘已生成: C:\Users\Administrator\Desktop\auto-test-framework\reports\dashboard\index.html
+2026-11-18 15:39:00,306 [INFO] utils.report_dashboard (report_dashboard.py:141):    共 45 份历史报告, 285 个测试用例, 最新通过率 100.0%
+2026-11-18 15:39:26,459 [INFO] conftest (conftest.py:152): 📁 Allure 结果目录已重置: C:\Users\Administrator\Desktop\auto-test-framework\reports\allure-results
+2026-11-18 15:39:26,463 [INFO] conftest (conftest.py:193): 📜 已从 26-11-18_15-38-58 复制历史趋势数据
+2026-11-18 15:39:26,464 [INFO] conftest (conftest.py:281): 📝 Allure 环境信息已写入: C:\Users\Administrator\Desktop\auto-test-framework\reports\allure-results\environment.properties
+2026-11-18 15:39:26,466 [INFO] conftest (conftest.py:164): 🚀 测试会话启动 — 环境: dev, 目标: http://10.200.15.3/
+2026-11-18 15:39:26,561 [INFO] conftest (conftest.py:366): ============================================================
+2026-11-18 15:39:26,561 [INFO] conftest (conftest.py:367): 🧪 开始测试: test_login_page_loaded
+2026-11-18 15:39:26,561 [INFO] conftest (conftest.py:369):    描述: 验证：登录页面正常加载，关键元素可见
+2026-11-18 15:39:26,818 [INFO] ui.browser (browser.py:99): 启动浏览器: type=chromium, headless=False, channel=chrome
+2026-11-18 15:39:27,138 [INFO] ui.browser (browser.py:125): 新页面已创建，viewport=None
+2026-11-18 15:39:27,140 [INFO] ui.pages.base_page (base_page.py:69): 导航到: http://10.200.15.3/login
+2026-11-18 15:39:28,121 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#loginId
+2026-11-18 15:39:28,126 [INFO] ui.assertions (assertions.py:72): ✅ 用户名输入框 可见
+2026-11-18 15:39:28,128 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#password
+2026-11-18 15:39:28,131 [INFO] ui.assertions (assertions.py:72): ✅ 密码输入框 可见
+2026-11-18 15:39:28,132 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-btn-primary
+2026-11-18 15:39:28,137 [INFO] ui.assertions (assertions.py:72): ✅ 登录按钮 可见
+2026-11-18 15:39:28,146 [INFO] conftest (conftest.py:377): ✅ 测试结束: test_login_page_loaded
+2026-11-18 15:39:28,157 [INFO] conftest (conftest.py:366): ============================================================
+2026-11-18 15:39:28,158 [INFO] conftest (conftest.py:367): 🧪 开始测试: test_forgot_password_link
+2026-11-18 15:39:28,158 [INFO] conftest (conftest.py:369):    描述: 验证：页面包含"忘记密码"链接
+2026-11-18 15:39:28,339 [INFO] ui.browser (browser.py:125): 新页面已创建，viewport=None
+2026-11-18 15:39:28,340 [INFO] ui.pages.base_page (base_page.py:69): 导航到: http://10.200.15.3/login
+2026-11-18 15:39:29,183 [DEBUG] ui.locator (locator.py:104): 定位元素: by=text, value=找回密码
+2026-11-18 15:39:29,251 [INFO] ui.assertions (assertions.py:72): ✅ 忘记密码链接 可见
+2026-11-18 15:39:29,264 [INFO] conftest (conftest.py:377): ✅ 测试结束: test_forgot_password_link
+2026-11-18 15:39:29,280 [INFO] conftest (conftest.py:366): ============================================================
+2026-11-18 15:39:29,280 [INFO] conftest (conftest.py:367): 🧪 开始测试: test_login_success[valid_admin]
+2026-11-18 15:39:29,281 [INFO] conftest (conftest.py:369):    描述: 验证：正确用户名和密码可以成功登录
+2026-11-18 15:39:29,463 [INFO] ui.browser (browser.py:125): 新页面已创建，viewport=None
+2026-11-18 15:39:29,464 [INFO] ui.pages.base_page (base_page.py:69): 导航到: http://10.200.15.3/login
+2026-11-18 15:39:30,319 [INFO] ui.pages.login_page (login_page.py:75): 登录操作: username=admin_01
+2026-11-18 15:39:30,370 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#loginId
+2026-11-18 15:39:30,593 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#password
+2026-11-18 15:39:30,808 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-btn-primary
+2026-11-18 15:39:31,055 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.avatar-content
+2026-11-18 15:39:33,385 [INFO] ui.assertions (assertions.py:72): ✅ 登录成功提示 可见
+2026-11-18 15:39:33,385 [INFO] ui.pages.login_page (login_page.py:133): ✅ 登录验证成功
+2026-11-18 15:39:33,393 [INFO] conftest (conftest.py:377): ✅ 测试结束: test_login_success[valid_admin]
+2026-11-18 15:39:33,402 [INFO] conftest (conftest.py:366): ============================================================
+2026-11-18 15:39:33,404 [INFO] conftest (conftest.py:367): 🧪 开始测试: test_login_failed_wrong_password[wrong_password]
+2026-11-18 15:39:33,404 [INFO] conftest (conftest.py:369):    描述: 验证：错误密码登录应显示错误提示
+2026-11-18 15:39:33,542 [INFO] ui.browser (browser.py:125): 新页面已创建，viewport=None
+2026-11-18 15:39:33,543 [INFO] ui.pages.base_page (base_page.py:69): 导航到: http://10.200.15.3/login
+2026-11-18 15:39:34,402 [INFO] ui.pages.login_page (login_page.py:75): 登录操作: username=admin
+2026-11-18 15:39:34,429 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#loginId
+2026-11-18 15:39:34,645 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#password
+2026-11-18 15:39:34,859 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-btn-primary
+2026-11-18 15:39:35,104 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-notification-notice
+2026-11-18 15:39:35,292 [INFO] ui.assertions (assertions.py:72): ✅ 错误提示 可见
+2026-11-18 15:39:35,292 [INFO] ui.pages.login_page (login_page.py:144): ✅ 登录失败验证成功
+2026-11-18 15:39:35,300 [INFO] conftest (conftest.py:377): ✅ 测试结束: test_login_failed_wrong_password[wrong_password]
+2026-11-18 15:39:35,310 [INFO] conftest (conftest.py:366): ============================================================
+2026-11-18 15:39:35,310 [INFO] conftest (conftest.py:367): 🧪 开始测试: test_login_boundary_values[empty_username]
+2026-11-18 15:39:35,310 [INFO] conftest (conftest.py:369):    描述: 参数化验证：空用户名/空密码等边界场景的校验提示
+2026-11-18 15:39:35,452 [INFO] ui.browser (browser.py:125): 新页面已创建，viewport=None
+2026-11-18 15:39:35,453 [INFO] ui.pages.base_page (base_page.py:69): 导航到: http://10.200.15.3/login
+2026-11-18 15:39:36,456 [INFO] ui.pages.login_page (login_page.py:75): 登录操作: username=
+2026-11-18 15:39:36,472 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#loginId
+2026-11-18 15:39:36,686 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#password
+2026-11-18 15:39:36,899 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-btn-primary
+2026-11-18 15:39:37,154 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-notification-notice
+2026-11-18 15:39:37,202 [INFO] ui.assertions (assertions.py:72): ✅ 错误提示 可见
+2026-11-18 15:39:37,205 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-notification-notice
+2026-11-18 15:39:37,209 [INFO] ui.assertions (assertions.py:125): ✅ 错误提示文本 包含文本: '账号'
+2026-11-18 15:39:37,210 [INFO] ui.pages.login_page (login_page.py:144): ✅ 登录失败验证成功
+2026-11-18 15:39:37,217 [INFO] conftest (conftest.py:377): ✅ 测试结束: test_login_boundary_values[empty_username]
+2026-11-18 15:39:37,225 [INFO] conftest (conftest.py:366): ============================================================
+2026-11-18 15:39:37,225 [INFO] conftest (conftest.py:367): 🧪 开始测试: test_login_boundary_values[empty_password]
+2026-11-18 15:39:37,225 [INFO] conftest (conftest.py:369):    描述: 参数化验证：空用户名/空密码等边界场景的校验提示
+2026-11-18 15:39:37,377 [INFO] ui.browser (browser.py:125): 新页面已创建，viewport=None
+2026-11-18 15:39:37,378 [INFO] ui.pages.base_page (base_page.py:69): 导航到: http://10.200.15.3/login
+2026-11-18 15:39:38,315 [INFO] ui.pages.login_page (login_page.py:75): 登录操作: username=admin
+2026-11-18 15:39:38,329 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#loginId
+2026-11-18 15:39:38,545 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#password
+2026-11-18 15:39:38,756 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-btn-primary
+2026-11-18 15:39:38,999 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-notification-notice
+2026-11-18 15:39:39,039 [INFO] ui.assertions (assertions.py:72): ✅ 错误提示 可见
+2026-11-18 15:39:39,042 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-notification-notice
+2026-11-18 15:39:39,044 [INFO] ui.assertions (assertions.py:125): ✅ 错误提示文本 包含文本: '密码'
+2026-11-18 15:39:39,044 [INFO] ui.pages.login_page (login_page.py:144): ✅ 登录失败验证成功
+2026-11-18 15:39:39,052 [INFO] conftest (conftest.py:377): ✅ 测试结束: test_login_boundary_values[empty_password]
+2026-11-18 15:39:39,059 [INFO] conftest (conftest.py:366): ============================================================
+2026-11-18 15:39:39,059 [INFO] conftest (conftest.py:367): 🧪 开始测试: test_login_boundary_values[short_password]
+2026-11-18 15:39:39,059 [INFO] conftest (conftest.py:369):    描述: 参数化验证：空用户名/空密码等边界场景的校验提示
+2026-11-18 15:39:39,206 [INFO] ui.browser (browser.py:125): 新页面已创建，viewport=None
+2026-11-18 15:39:39,207 [INFO] ui.pages.base_page (base_page.py:69): 导航到: http://10.200.15.3/login
+2026-11-18 15:39:40,273 [INFO] ui.pages.login_page (login_page.py:75): 登录操作: username=admin
+2026-11-18 15:39:40,292 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#loginId
+2026-11-18 15:39:40,514 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#password
+2026-11-18 15:39:40,728 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-btn-primary
+2026-11-18 15:39:40,970 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-notification-notice
+2026-11-18 15:39:41,014 [INFO] ui.assertions (assertions.py:72): ✅ 错误提示 可见
+2026-11-18 15:39:41,014 [INFO] ui.pages.login_page (login_page.py:144): ✅ 登录失败验证成功
+2026-11-18 15:39:41,024 [INFO] conftest (conftest.py:377): ✅ 测试结束: test_login_boundary_values[short_password]
+2026-11-18 15:39:41,032 [INFO] conftest (conftest.py:366): ============================================================
+2026-11-18 15:39:41,032 [INFO] conftest (conftest.py:367): 🧪 开始测试: test_login_retry_after_failure[login_retry_after_failure]
+2026-11-18 15:39:41,032 [INFO] conftest (conftest.py:369):    描述: 验证：首次用错误密码登录失败后，修正密码可立即重新登录成功
+2026-11-18 15:39:41,167 [INFO] ui.browser (browser.py:125): 新页面已创建，viewport=None
+2026-11-18 15:39:41,168 [INFO] ui.pages.base_page (base_page.py:69): 导航到: http://10.200.15.3/login
+2026-11-18 15:39:42,004 [INFO] ui.pages.login_page (login_page.py:75): 登录操作: username=admin_01
+2026-11-18 15:39:42,051 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#loginId
+2026-11-18 15:39:42,273 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#password
+2026-11-18 15:39:42,488 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-btn-primary
+2026-11-18 15:39:42,737 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-notification-notice
+2026-11-18 15:39:42,927 [INFO] ui.assertions (assertions.py:72): ✅ 错误提示 可见
+2026-11-18 15:39:42,927 [INFO] ui.pages.login_page (login_page.py:144): ✅ 登录失败验证成功
+2026-11-18 15:39:42,930 [INFO] ui.assertions (assertions.py:150): ✅ URL 包含: 'login'
+2026-11-18 15:39:42,930 [INFO] ui.pages.login_page (login_page.py:102): ✅ 仍在登录页
+2026-11-18 15:39:42,932 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#password
+2026-11-18 15:39:43,143 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-btn-primary
+2026-11-18 15:39:44,196 [INFO] ui.pages.login_page (login_page.py:110): ✅ 已离开登录页: http://10.200.15.3/
+2026-11-18 15:39:44,198 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#loginId
+2026-11-18 15:39:44,200 [INFO] ui.assertions (assertions.py:82): ✅ 登录表单 已隐藏
+2026-11-18 15:39:44,209 [INFO] conftest (conftest.py:377): ✅ 测试结束: test_login_retry_after_failure[login_retry_after_failure]
+2026-11-18 15:39:44,474 [INFO] ui.browser (browser.py:155): 浏览器资源已释放
+2026-11-18 15:39:44,480 [INFO] conftest (conftest.py:204): 🏁 测试会话结束 — 退出码: 0
+2026-11-18 15:39:44,480 [INFO] conftest (conftest.py:239): 📊 正在生成 Allure 报告...
+2026-11-18 15:39:44,480 [INFO] conftest (conftest.py:240):    结果目录: C:\Users\Administrator\Desktop\auto-test-framework\reports\allure-results
+2026-11-18 15:39:44,481 [INFO] conftest (conftest.py:241):    报告目录: C:\Users\Administrator\Desktop\auto-test-framework\reports\allure-reports\26-11-18_15-39-44
+2026-11-18 15:39:46,705 [INFO] conftest (conftest.py:254): ✅ Allure 报告生成成功: C:\Users\Administrator\Desktop\auto-test-framework\reports\allure-reports\26-11-18_15-39-44
+2026-11-18 15:39:46,706 [INFO] conftest (conftest.py:334): 📋 报告元数据已保存: C:\Users\Administrator\Desktop\auto-test-framework\reports\allure-reports\26-11-18_15-39-44\report.json
+2026-11-18 15:39:46,714 [INFO] utils.report_dashboard (report_dashboard.py:140): ✅ 仪表盘已生成: C:\Users\Administrator\Desktop\auto-test-framework\reports\dashboard\index.html
+2026-11-18 15:39:46,714 [INFO] utils.report_dashboard (report_dashboard.py:141):    共 46 份历史报告, 294 个测试用例, 最新通过率 88.9%
+2026-11-18 15:54:33,317 [INFO] conftest (conftest.py:152): 📁 Allure 结果目录已重置: C:\Users\Administrator\Desktop\auto-test-framework\reports\allure-results
+2026-11-18 15:54:33,323 [INFO] conftest (conftest.py:193): 📜 已从 26-11-18_15-39-44 复制历史趋势数据
+2026-11-18 15:54:33,324 [INFO] conftest (conftest.py:287): 📝 Allure 环境信息已写入: C:\Users\Administrator\Desktop\auto-test-framework\reports\allure-results\environment.properties
+2026-11-18 15:54:33,324 [INFO] conftest (conftest.py:164): 🚀 测试会话启动 — 环境: dev, 目标: http://10.200.15.3/
+2026-11-18 15:54:33,425 [INFO] conftest (conftest.py:372): ============================================================
+2026-11-18 15:54:33,425 [INFO] conftest (conftest.py:373): 🧪 开始测试: test_login_retry_after_failure[login_retry_after_failure]
+2026-11-18 15:54:33,425 [INFO] conftest (conftest.py:375):    描述: 验证：首次用错误密码登录失败后，修正密码可立即重新登录成功
+2026-11-18 15:54:33,694 [INFO] ui.browser (browser.py:99): 启动浏览器: type=chromium, headless=False, channel=chrome
+2026-11-18 15:54:34,033 [INFO] ui.browser (browser.py:125): 新页面已创建，viewport=None
+2026-11-18 15:54:34,034 [INFO] ui.pages.base_page (base_page.py:69): 导航到: http://10.200.15.3/login
+2026-11-18 15:54:34,960 [INFO] ui.pages.login_page (login_page.py:75): 登录操作: username=admin_01
+2026-11-18 15:54:34,990 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#loginId
+2026-11-18 15:54:35,288 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#password
+2026-11-18 15:54:35,502 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-btn-primary
+2026-11-18 15:54:35,760 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-notification-notice
+2026-11-18 15:54:35,848 [INFO] ui.assertions (assertions.py:72): ✅ 错误提示 可见
+2026-11-18 15:54:35,849 [INFO] ui.pages.login_page (login_page.py:144): ✅ 登录失败验证成功
+2026-11-18 15:54:35,851 [INFO] ui.assertions (assertions.py:150): ✅ URL 包含: 'login'
+2026-11-18 15:54:35,852 [INFO] ui.pages.login_page (login_page.py:102): ✅ 仍在登录页
+2026-11-18 15:54:35,855 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#password
+2026-11-18 15:54:36,064 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-btn-primary
+2026-11-18 15:54:36,509 [INFO] ui.pages.login_page (login_page.py:110): ✅ 已离开登录页: http://10.200.15.3/
+2026-11-18 15:54:36,511 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#loginId
+2026-11-18 15:54:36,513 [INFO] ui.assertions (assertions.py:82): ✅ 登录表单 已隐藏
+2026-11-18 15:54:36,522 [INFO] conftest (conftest.py:383): ✅ 测试结束: test_login_retry_after_failure[login_retry_after_failure]
+2026-11-18 15:54:36,759 [INFO] ui.browser (browser.py:155): 浏览器资源已释放
+2026-11-18 15:54:36,764 [INFO] conftest (conftest.py:204): 🏁 测试会话结束 — 退出码: 0
+2026-11-18 15:54:36,764 [INFO] conftest (conftest.py:232): ⏭️ 已跳过 Allure 报告生成（--no-report）
+2026-11-18 15:54:48,266 [INFO] conftest (conftest.py:152): 📁 Allure 结果目录已重置: C:\Users\Administrator\Desktop\auto-test-framework\reports\allure-results
+2026-11-18 15:54:48,271 [INFO] conftest (conftest.py:193): 📜 已从 26-11-18_15-39-44 复制历史趋势数据
+2026-11-18 15:54:48,272 [INFO] conftest (conftest.py:287): 📝 Allure 环境信息已写入: C:\Users\Administrator\Desktop\auto-test-framework\reports\allure-results\environment.properties
+2026-11-18 15:54:48,272 [INFO] conftest (conftest.py:164): 🚀 测试会话启动 — 环境: dev, 目标: http://10.200.15.3/
+2026-11-18 15:54:48,365 [INFO] conftest (conftest.py:372): ============================================================
+2026-11-18 15:54:48,366 [INFO] conftest (conftest.py:373): 🧪 开始测试: test_login_retry_after_failure[login_retry_after_failure]
+2026-11-18 15:54:48,366 [INFO] conftest (conftest.py:375):    描述: 验证：首次用错误密码登录失败后，修正密码可立即重新登录成功
+2026-11-18 15:54:48,628 [INFO] ui.browser (browser.py:99): 启动浏览器: type=chromium, headless=False, channel=chrome
+2026-11-18 15:54:48,942 [INFO] ui.browser (browser.py:125): 新页面已创建，viewport=None
+2026-11-18 15:54:48,943 [INFO] ui.pages.base_page (base_page.py:69): 导航到: http://10.200.15.3/login
+2026-11-18 15:54:49,778 [INFO] ui.pages.login_page (login_page.py:75): 登录操作: username=admin_01
+2026-11-18 15:54:49,836 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#loginId
+2026-11-18 15:54:50,072 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#password
+2026-11-18 15:54:50,287 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-btn-primary
+2026-11-18 15:54:50,538 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-notification-notice
+2026-11-18 15:54:50,728 [INFO] ui.assertions (assertions.py:72): ✅ 错误提示 可见
+2026-11-18 15:54:50,728 [INFO] ui.pages.login_page (login_page.py:144): ✅ 登录失败验证成功
+2026-11-18 15:54:50,731 [INFO] ui.assertions (assertions.py:150): ✅ URL 包含: 'login'
+2026-11-18 15:54:50,731 [INFO] ui.pages.login_page (login_page.py:102): ✅ 仍在登录页
+2026-11-18 15:54:50,733 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#password
+2026-11-18 15:54:50,947 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-btn-primary
+2026-11-18 15:54:51,426 [INFO] ui.pages.login_page (login_page.py:110): ✅ 已离开登录页: http://10.200.15.3/
+2026-11-18 15:54:51,428 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#loginId
+2026-11-18 15:54:51,430 [INFO] ui.assertions (assertions.py:82): ✅ 登录表单 已隐藏
+2026-11-18 15:54:51,441 [INFO] conftest (conftest.py:383): ✅ 测试结束: test_login_retry_after_failure[login_retry_after_failure]
+2026-11-18 15:54:51,663 [INFO] ui.browser (browser.py:155): 浏览器资源已释放
+2026-11-18 15:54:51,670 [INFO] conftest (conftest.py:204): 🏁 测试会话结束 — 退出码: 0
+2026-11-18 15:54:51,671 [INFO] conftest (conftest.py:245): 📊 正在生成 Allure 报告...
+2026-11-18 15:54:51,671 [INFO] conftest (conftest.py:246):    结果目录: C:\Users\Administrator\Desktop\auto-test-framework\reports\allure-results
+2026-11-18 15:54:51,671 [INFO] conftest (conftest.py:247):    报告目录: C:\Users\Administrator\Desktop\auto-test-framework\reports\allure-reports\26-11-18_15-54-51
+2026-11-18 15:54:53,906 [INFO] conftest (conftest.py:260): ✅ Allure 报告生成成功: C:\Users\Administrator\Desktop\auto-test-framework\reports\allure-reports\26-11-18_15-54-51
+2026-11-18 15:54:53,907 [INFO] conftest (conftest.py:340): 📋 报告元数据已保存: C:\Users\Administrator\Desktop\auto-test-framework\reports\allure-reports\26-11-18_15-54-51\report.json
+2026-11-18 15:54:53,915 [INFO] utils.report_dashboard (report_dashboard.py:140): ✅ 仪表盘已生成: C:\Users\Administrator\Desktop\auto-test-framework\reports\dashboard\index.html
+2026-11-18 15:54:53,915 [INFO] utils.report_dashboard (report_dashboard.py:141):    共 47 份历史报告, 295 个测试用例, 最新通过率 100.0%
+2026-11-18 16:23:29,185 [INFO] conftest (conftest.py:152): 📁 Allure 结果目录已重置: C:\Users\Administrator\Desktop\auto-test-framework\reports\allure-results
+2026-11-18 16:23:29,190 [INFO] conftest (conftest.py:193): 📜 已从 26-11-18_15-54-51 复制历史趋势数据
+2026-11-18 16:23:29,191 [INFO] conftest (conftest.py:287): 📝 Allure 环境信息已写入: C:\Users\Administrator\Desktop\auto-test-framework\reports\allure-results\environment.properties
+2026-11-18 16:23:29,191 [INFO] conftest (conftest.py:164): 🚀 测试会话启动 — 环境: dev, 目标: http://10.200.15.3/
+2026-11-18 16:23:29,303 [INFO] conftest (conftest.py:372): ============================================================
+2026-11-18 16:23:29,304 [INFO] conftest (conftest.py:373): 🧪 开始测试: test_account_id_matches_login_user[personal_center_account_id]
+2026-11-18 16:23:29,304 [INFO] conftest (conftest.py:375):    描述: 验证：个人中心页面展示的账号 id 与登录使用的账号一致
+2026-11-18 16:23:29,571 [INFO] ui.browser (browser.py:99): 启动浏览器: type=chromium, headless=False, channel=chrome
+2026-11-18 16:23:29,903 [INFO] ui.browser (browser.py:125): 新页面已创建，viewport=None
+2026-11-18 16:23:29,903 [INFO] ui.pages.base_page (base_page.py:69): 导航到: http://10.200.15.3/login
+2026-11-18 16:23:30,805 [INFO] ui.pages.login_page (login_page.py:75): 登录操作: username=admin_01
+2026-11-18 16:23:30,862 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#loginId
+2026-11-18 16:23:31,082 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#password
+2026-11-18 16:23:31,295 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-btn-primary
+2026-11-18 16:23:33,488 [INFO] ui.assertions (assertions.py:150): ✅ URL 包含: 'home'
+2026-11-18 16:23:33,490 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.avatar-content
+2026-11-18 16:23:33,492 [INFO] ui.assertions (assertions.py:72): ✅ 右上角头像 可见
+2026-11-18 16:23:33,492 [INFO] ui.pages.home_page (home_page.py:61): ✅ 已进入首页
+2026-11-18 16:23:33,492 [INFO] ui.pages.home_page (home_page.py:47): hover 右上角头像，触发账号下拉
+2026-11-18 16:23:33,494 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.avatar-content
+2026-11-18 16:23:33,731 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.avatar-dropdown-wrapper
+2026-11-18 16:23:33,733 [INFO] ui.assertions (assertions.py:72): ✅ 账号下拉菜单 可见
+2026-11-18 16:23:33,733 [DEBUG] ui.locator (locator.py:104): 定位元素: by=text, value=个人中心
+2026-11-18 16:23:33,738 [INFO] ui.assertions (assertions.py:72): ✅ 菜单项-个人中心 可见
+2026-11-18 16:23:33,739 [INFO] ui.pages.home_page (home_page.py:53): 点击菜单项: 个人中心
+2026-11-18 16:23:33,739 [DEBUG] ui.locator (locator.py:104): 定位元素: by=text, value=个人中心
+2026-11-18 16:23:34,498 [INFO] ui.assertions (assertions.py:150): ✅ URL 包含: 'account/settings'
+2026-11-18 16:23:34,498 [INFO] ui.pages.personal_center_page (personal_center_page.py:41): ✅ 已进入个人中心页面
+2026-11-18 16:23:34,500 [DEBUG] ui.locator (locator.py:104): 定位元素: by=xpath, value=//span[contains(@class,'ant-descriptions-item-label')][normalize-space()='账号']/following-sibling::span[contains(@class,'ant-descriptions-item-content')]
+2026-11-18 16:23:36,391 [INFO] ui.assertions (assertions.py:114): ✅ 个人中心账号id 文本匹配: 'admin_01'
+2026-11-18 16:23:36,392 [INFO] ui.pages.personal_center_page (personal_center_page.py:52): ✅ 账号 id 与登录账号一致: admin_01
+2026-11-18 16:23:36,400 [INFO] conftest (conftest.py:383): ✅ 测试结束: test_account_id_matches_login_user[personal_center_account_id]
+2026-11-18 16:23:36,646 [INFO] ui.browser (browser.py:155): 浏览器资源已释放
+2026-11-18 16:23:36,653 [INFO] conftest (conftest.py:204): 🏁 测试会话结束 — 退出码: 0
+2026-11-18 16:23:36,654 [INFO] conftest (conftest.py:232): ⏭️ 已跳过 Allure 报告生成（--no-report）
+2026-11-18 16:23:46,258 [INFO] conftest (conftest.py:152): 📁 Allure 结果目录已重置: C:\Users\Administrator\Desktop\auto-test-framework\reports\allure-results
+2026-11-18 16:23:46,266 [INFO] conftest (conftest.py:193): 📜 已从 26-11-18_15-54-51 复制历史趋势数据
+2026-11-18 16:23:46,266 [INFO] conftest (conftest.py:287): 📝 Allure 环境信息已写入: C:\Users\Administrator\Desktop\auto-test-framework\reports\allure-results\environment.properties
+2026-11-18 16:23:46,266 [INFO] conftest (conftest.py:164): 🚀 测试会话启动 — 环境: dev, 目标: http://10.200.15.3/
+2026-11-18 16:23:46,373 [INFO] conftest (conftest.py:372): ============================================================
+2026-11-18 16:23:46,373 [INFO] conftest (conftest.py:373): 🧪 开始测试: test_login_page_loaded
+2026-11-18 16:23:46,373 [INFO] conftest (conftest.py:375):    描述: 验证：登录页面正常加载，关键元素可见
+2026-11-18 16:23:46,642 [INFO] ui.browser (browser.py:99): 启动浏览器: type=chromium, headless=False, channel=chrome
+2026-11-18 16:23:46,961 [INFO] ui.browser (browser.py:125): 新页面已创建，viewport=None
+2026-11-18 16:23:46,962 [INFO] ui.pages.base_page (base_page.py:69): 导航到: http://10.200.15.3/login
+2026-11-18 16:23:47,959 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#loginId
+2026-11-18 16:23:47,964 [INFO] ui.assertions (assertions.py:72): ✅ 用户名输入框 可见
+2026-11-18 16:23:47,967 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#password
+2026-11-18 16:23:47,971 [INFO] ui.assertions (assertions.py:72): ✅ 密码输入框 可见
+2026-11-18 16:23:47,973 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-btn-primary
+2026-11-18 16:23:47,976 [INFO] ui.assertions (assertions.py:72): ✅ 登录按钮 可见
+2026-11-18 16:23:47,983 [INFO] conftest (conftest.py:383): ✅ 测试结束: test_login_page_loaded
+2026-11-18 16:23:47,991 [INFO] conftest (conftest.py:372): ============================================================
+2026-11-18 16:23:47,991 [INFO] conftest (conftest.py:373): 🧪 开始测试: test_forgot_password_link
+2026-11-18 16:23:47,992 [INFO] conftest (conftest.py:375):    描述: 验证：页面包含"忘记密码"链接
+2026-11-18 16:23:48,139 [INFO] ui.browser (browser.py:125): 新页面已创建，viewport=None
+2026-11-18 16:23:48,139 [INFO] ui.pages.base_page (base_page.py:69): 导航到: http://10.200.15.3/login
+2026-11-18 16:23:49,123 [DEBUG] ui.locator (locator.py:104): 定位元素: by=text, value=找回密码
+2026-11-18 16:23:49,140 [INFO] ui.assertions (assertions.py:72): ✅ 忘记密码链接 可见
+2026-11-18 16:23:49,146 [INFO] conftest (conftest.py:383): ✅ 测试结束: test_forgot_password_link
+2026-11-18 16:23:49,157 [INFO] conftest (conftest.py:372): ============================================================
+2026-11-18 16:23:49,158 [INFO] conftest (conftest.py:373): 🧪 开始测试: test_login_success[valid_admin]
+2026-11-18 16:23:49,158 [INFO] conftest (conftest.py:375):    描述: 验证：正确用户名和密码可以成功登录
+2026-11-18 16:23:49,330 [INFO] ui.browser (browser.py:125): 新页面已创建，viewport=None
+2026-11-18 16:23:49,331 [INFO] ui.pages.base_page (base_page.py:69): 导航到: http://10.200.15.3/login
+2026-11-18 16:23:50,306 [INFO] ui.pages.login_page (login_page.py:75): 登录操作: username=admin_01
+2026-11-18 16:23:50,327 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#loginId
+2026-11-18 16:23:50,550 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#password
+2026-11-18 16:23:50,764 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-btn-primary
+2026-11-18 16:23:51,004 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.avatar-content
+2026-11-18 16:23:52,823 [INFO] ui.assertions (assertions.py:72): ✅ 登录成功提示 可见
+2026-11-18 16:23:52,824 [INFO] ui.pages.login_page (login_page.py:133): ✅ 登录验证成功
+2026-11-18 16:23:52,830 [INFO] conftest (conftest.py:383): ✅ 测试结束: test_login_success[valid_admin]
+2026-11-18 16:23:52,841 [INFO] conftest (conftest.py:372): ============================================================
+2026-11-18 16:23:52,842 [INFO] conftest (conftest.py:373): 🧪 开始测试: test_login_failed_wrong_password[wrong_password]
+2026-11-18 16:23:52,842 [INFO] conftest (conftest.py:375):    描述: 验证：错误密码登录应显示错误提示
+2026-11-18 16:23:52,982 [INFO] ui.browser (browser.py:125): 新页面已创建，viewport=None
+2026-11-18 16:23:52,983 [INFO] ui.pages.base_page (base_page.py:69): 导航到: http://10.200.15.3/login
+2026-11-18 16:23:53,979 [INFO] ui.pages.login_page (login_page.py:75): 登录操作: username=admin
+2026-11-18 16:23:53,997 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#loginId
+2026-11-18 16:23:54,215 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#password
+2026-11-18 16:23:54,426 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-btn-primary
+2026-11-18 16:23:54,671 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-notification-notice
+2026-11-18 16:23:54,861 [INFO] ui.assertions (assertions.py:72): ✅ 错误提示 可见
+2026-11-18 16:23:54,862 [INFO] ui.pages.login_page (login_page.py:144): ✅ 登录失败验证成功
+2026-11-18 16:23:54,870 [INFO] conftest (conftest.py:383): ✅ 测试结束: test_login_failed_wrong_password[wrong_password]
+2026-11-18 16:23:54,878 [INFO] conftest (conftest.py:372): ============================================================
+2026-11-18 16:23:54,879 [INFO] conftest (conftest.py:373): 🧪 开始测试: test_login_boundary_values[empty_username]
+2026-11-18 16:23:54,879 [INFO] conftest (conftest.py:375):    描述: 参数化验证：空用户名/空密码等边界场景的校验提示
+2026-11-18 16:23:55,011 [INFO] ui.browser (browser.py:125): 新页面已创建，viewport=None
+2026-11-18 16:23:55,011 [INFO] ui.pages.base_page (base_page.py:69): 导航到: http://10.200.15.3/login
+2026-11-18 16:23:56,016 [INFO] ui.pages.login_page (login_page.py:75): 登录操作: username=
+2026-11-18 16:23:56,043 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#loginId
+2026-11-18 16:23:56,278 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#password
+2026-11-18 16:23:56,491 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-btn-primary
+2026-11-18 16:23:56,736 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-notification-notice
+2026-11-18 16:23:56,778 [INFO] ui.assertions (assertions.py:72): ✅ 错误提示 可见
+2026-11-18 16:23:56,780 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-notification-notice
+2026-11-18 16:23:56,782 [INFO] ui.assertions (assertions.py:125): ✅ 错误提示文本 包含文本: '账号'
+2026-11-18 16:23:56,783 [INFO] ui.pages.login_page (login_page.py:144): ✅ 登录失败验证成功
+2026-11-18 16:23:56,792 [INFO] conftest (conftest.py:383): ✅ 测试结束: test_login_boundary_values[empty_username]
+2026-11-18 16:23:56,799 [INFO] conftest (conftest.py:372): ============================================================
+2026-11-18 16:23:56,800 [INFO] conftest (conftest.py:373): 🧪 开始测试: test_login_boundary_values[empty_password]
+2026-11-18 16:23:56,800 [INFO] conftest (conftest.py:375):    描述: 参数化验证：空用户名/空密码等边界场景的校验提示
+2026-11-18 16:23:56,997 [INFO] ui.browser (browser.py:125): 新页面已创建，viewport=None
+2026-11-18 16:23:56,998 [INFO] ui.pages.base_page (base_page.py:69): 导航到: http://10.200.15.3/login
+2026-11-18 16:23:58,030 [INFO] ui.pages.login_page (login_page.py:75): 登录操作: username=admin
+2026-11-18 16:23:58,045 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#loginId
+2026-11-18 16:23:58,261 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#password
+2026-11-18 16:23:58,474 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-btn-primary
+2026-11-18 16:23:58,719 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-notification-notice
+2026-11-18 16:23:58,806 [INFO] ui.assertions (assertions.py:72): ✅ 错误提示 可见
+2026-11-18 16:23:58,808 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-notification-notice
+2026-11-18 16:23:58,810 [INFO] ui.assertions (assertions.py:125): ✅ 错误提示文本 包含文本: '密码'
+2026-11-18 16:23:58,810 [INFO] ui.pages.login_page (login_page.py:144): ✅ 登录失败验证成功
+2026-11-18 16:23:58,817 [INFO] conftest (conftest.py:383): ✅ 测试结束: test_login_boundary_values[empty_password]
+2026-11-18 16:23:58,829 [INFO] conftest (conftest.py:372): ============================================================
+2026-11-18 16:23:58,830 [INFO] conftest (conftest.py:373): 🧪 开始测试: test_login_boundary_values[short_password]
+2026-11-18 16:23:58,830 [INFO] conftest (conftest.py:375):    描述: 参数化验证：空用户名/空密码等边界场景的校验提示
+2026-11-18 16:23:58,967 [INFO] ui.browser (browser.py:125): 新页面已创建，viewport=None
+2026-11-18 16:23:58,967 [INFO] ui.pages.base_page (base_page.py:69): 导航到: http://10.200.15.3/login
+2026-11-18 16:24:00,028 [INFO] ui.pages.login_page (login_page.py:75): 登录操作: username=admin
+2026-11-18 16:24:00,044 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#loginId
+2026-11-18 16:24:00,261 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#password
+2026-11-18 16:24:00,474 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-btn-primary
+2026-11-18 16:24:00,723 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-notification-notice
+2026-11-18 16:24:00,809 [INFO] ui.assertions (assertions.py:72): ✅ 错误提示 可见
+2026-11-18 16:24:00,809 [INFO] ui.pages.login_page (login_page.py:144): ✅ 登录失败验证成功
+2026-11-18 16:24:00,816 [INFO] conftest (conftest.py:383): ✅ 测试结束: test_login_boundary_values[short_password]
+2026-11-18 16:24:00,827 [INFO] conftest (conftest.py:372): ============================================================
+2026-11-18 16:24:00,827 [INFO] conftest (conftest.py:373): 🧪 开始测试: test_login_retry_after_failure[login_retry_after_failure]
+2026-11-18 16:24:00,827 [INFO] conftest (conftest.py:375):    描述: 验证：首次用错误密码登录失败后，修正密码可立即重新登录成功
+2026-11-18 16:24:00,950 [INFO] ui.browser (browser.py:125): 新页面已创建，viewport=None
+2026-11-18 16:24:00,950 [INFO] ui.pages.base_page (base_page.py:69): 导航到: http://10.200.15.3/login
+2026-11-18 16:24:01,924 [INFO] ui.pages.login_page (login_page.py:75): 登录操作: username=admin_01
+2026-11-18 16:24:01,939 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#loginId
+2026-11-18 16:24:02,153 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#password
+2026-11-18 16:24:02,364 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-btn-primary
+2026-11-18 16:24:02,607 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-notification-notice
+2026-11-18 16:24:02,796 [INFO] ui.assertions (assertions.py:72): ✅ 错误提示 可见
+2026-11-18 16:24:02,796 [INFO] ui.pages.login_page (login_page.py:144): ✅ 登录失败验证成功
+2026-11-18 16:24:02,798 [INFO] ui.assertions (assertions.py:150): ✅ URL 包含: 'login'
+2026-11-18 16:24:02,798 [INFO] ui.pages.login_page (login_page.py:102): ✅ 仍在登录页
+2026-11-18 16:24:02,800 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#password
+2026-11-18 16:24:03,014 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-btn-primary
+2026-11-18 16:24:03,541 [INFO] ui.pages.login_page (login_page.py:110): ✅ 已离开登录页: http://10.200.15.3/
+2026-11-18 16:24:03,543 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#loginId
+2026-11-18 16:24:03,545 [INFO] ui.assertions (assertions.py:82): ✅ 登录表单 已隐藏
+2026-11-18 16:24:03,553 [INFO] conftest (conftest.py:383): ✅ 测试结束: test_login_retry_after_failure[login_retry_after_failure]
+2026-11-18 16:24:03,562 [INFO] conftest (conftest.py:372): ============================================================
+2026-11-18 16:24:03,562 [INFO] conftest (conftest.py:373): 🧪 开始测试: test_account_id_matches_login_user[personal_center_account_id]
+2026-11-18 16:24:03,562 [INFO] conftest (conftest.py:375):    描述: 验证：个人中心页面展示的账号 id 与登录使用的账号一致
+2026-11-18 16:24:03,718 [INFO] ui.browser (browser.py:125): 新页面已创建，viewport=None
+2026-11-18 16:24:03,718 [INFO] ui.pages.base_page (base_page.py:69): 导航到: http://10.200.15.3/login
+2026-11-18 16:24:04,754 [INFO] ui.pages.login_page (login_page.py:75): 登录操作: username=admin_01
+2026-11-18 16:24:04,768 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#loginId
+2026-11-18 16:24:04,983 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#password
+2026-11-18 16:24:05,196 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-btn-primary
+2026-11-18 16:24:07,354 [INFO] ui.assertions (assertions.py:150): ✅ URL 包含: 'home'
+2026-11-18 16:24:07,356 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.avatar-content
+2026-11-18 16:24:07,358 [INFO] ui.assertions (assertions.py:72): ✅ 右上角头像 可见
+2026-11-18 16:24:07,358 [INFO] ui.pages.home_page (home_page.py:61): ✅ 已进入首页
+2026-11-18 16:24:07,359 [INFO] ui.pages.home_page (home_page.py:47): hover 右上角头像，触发账号下拉
+2026-11-18 16:24:07,360 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.avatar-content
+2026-11-18 16:24:07,601 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.avatar-dropdown-wrapper
+2026-11-18 16:24:07,605 [INFO] ui.assertions (assertions.py:72): ✅ 账号下拉菜单 可见
+2026-11-18 16:24:07,605 [DEBUG] ui.locator (locator.py:104): 定位元素: by=text, value=个人中心
+2026-11-18 16:24:07,607 [INFO] ui.assertions (assertions.py:72): ✅ 菜单项-个人中心 可见
+2026-11-18 16:24:07,608 [INFO] ui.pages.home_page (home_page.py:53): 点击菜单项: 个人中心
+2026-11-18 16:24:07,608 [DEBUG] ui.locator (locator.py:104): 定位元素: by=text, value=个人中心
+2026-11-18 16:24:08,173 [INFO] ui.assertions (assertions.py:150): ✅ URL 包含: 'account/settings'
+2026-11-18 16:24:08,173 [INFO] ui.pages.personal_center_page (personal_center_page.py:41): ✅ 已进入个人中心页面
+2026-11-18 16:24:08,212 [DEBUG] ui.locator (locator.py:104): 定位元素: by=xpath, value=//span[contains(@class,'ant-descriptions-item-label')][normalize-space()='账号']/following-sibling::span[contains(@class,'ant-descriptions-item-content')]
+2026-11-18 16:24:08,216 [INFO] ui.assertions (assertions.py:114): ✅ 个人中心账号id 文本匹配: 'admin_01'
+2026-11-18 16:24:08,217 [INFO] ui.pages.personal_center_page (personal_center_page.py:52): ✅ 账号 id 与登录账号一致: admin_01
+2026-11-18 16:24:08,228 [INFO] conftest (conftest.py:383): ✅ 测试结束: test_account_id_matches_login_user[personal_center_account_id]
+2026-11-18 16:24:08,456 [INFO] ui.browser (browser.py:155): 浏览器资源已释放
+2026-11-18 16:24:08,461 [INFO] conftest (conftest.py:204): 🏁 测试会话结束 — 退出码: 0
+2026-11-18 16:24:08,462 [INFO] conftest (conftest.py:232): ⏭️ 已跳过 Allure 报告生成（--no-report）
+2026-11-18 16:31:54,774 [INFO] conftest (conftest.py:152): 📁 Allure 结果目录已重置: C:\Users\Administrator\Desktop\auto-test-framework\reports\allure-results
+2026-11-18 16:31:54,779 [INFO] conftest (conftest.py:193): 📜 已从 26-11-18_15-54-51 复制历史趋势数据
+2026-11-18 16:31:54,779 [INFO] conftest (conftest.py:287): 📝 Allure 环境信息已写入: C:\Users\Administrator\Desktop\auto-test-framework\reports\allure-results\environment.properties
+2026-11-18 16:31:54,780 [INFO] conftest (conftest.py:164): 🚀 测试会话启动 — 环境: dev, 目标: http://10.200.15.3/
+2026-11-18 16:31:54,833 [INFO] conftest (conftest.py:204): 🏁 测试会话结束 — 退出码: 0
+2026-11-18 16:31:54,834 [INFO] conftest (conftest.py:245): 📊 正在生成 Allure 报告...
+2026-11-18 16:31:54,834 [INFO] conftest (conftest.py:246):    结果目录: C:\Users\Administrator\Desktop\auto-test-framework\reports\allure-results
+2026-11-18 16:31:54,834 [INFO] conftest (conftest.py:247):    报告目录: C:\Users\Administrator\Desktop\auto-test-framework\reports\allure-reports\26-11-18_16-31-54
+2026-11-18 16:31:56,741 [INFO] conftest (conftest.py:260): ✅ Allure 报告生成成功: C:\Users\Administrator\Desktop\auto-test-framework\reports\allure-reports\26-11-18_16-31-54
+2026-11-18 16:31:56,742 [INFO] conftest (conftest.py:340): 📋 报告元数据已保存: C:\Users\Administrator\Desktop\auto-test-framework\reports\allure-reports\26-11-18_16-31-54\report.json
+2026-11-18 16:31:56,752 [INFO] utils.report_dashboard (report_dashboard.py:140): ✅ 仪表盘已生成: C:\Users\Administrator\Desktop\auto-test-framework\reports\dashboard\index.html
+2026-11-18 16:31:56,753 [INFO] utils.report_dashboard (report_dashboard.py:141):    共 48 份历史报告, 295 个测试用例, 最新通过率 0%
+2026-11-18 16:32:12,581 [INFO] utils.report_dashboard (report_dashboard.py:140): ✅ 仪表盘已生成: C:\Users\Administrator\Desktop\auto-test-framework\reports\dashboard\index.html
+2026-11-18 16:32:12,583 [INFO] utils.report_dashboard (report_dashboard.py:141):    共 33 份历史报告, 198 个测试用例, 最新通过率 50.0%
+2026-11-18 16:39:49,209 [INFO] conftest (conftest.py:152): 📁 Allure 结果目录已重置: C:\Users\Administrator\Desktop\auto-test-framework\reports\allure-results
+2026-11-18 16:39:49,216 [INFO] conftest (conftest.py:193): 📜 已从 26-11-17_23-51-58 复制历史趋势数据
+2026-11-18 16:39:49,217 [INFO] conftest (conftest.py:287): 📝 Allure 环境信息已写入: C:\Users\Administrator\Desktop\auto-test-framework\reports\allure-results\environment.properties
+2026-11-18 16:39:49,217 [INFO] conftest (conftest.py:164): 🚀 测试会话启动 — 环境: dev, 目标: http://10.200.15.3/
+2026-11-18 16:39:49,321 [INFO] conftest (conftest.py:372): ============================================================
+2026-11-18 16:39:49,321 [INFO] conftest (conftest.py:373): 🧪 开始测试: test_login_api_reachable
+2026-11-18 16:39:49,321 [INFO] conftest (conftest.py:375):    描述: 验证：登录接口 HTTP 可达，返回 200
+2026-11-18 16:39:49,322 [INFO] api.client (client.py:77): [API] POST http://10.200.15.3:80/auth/auth/login
+2026-11-18 16:39:49,322 [DEBUG] api.client (client.py:84):   json: {'loginId': 'admin', 'password': '******'}
+2026-11-18 16:39:49,326 [INFO] api.client (client.py:88): [API] POST http://10.200.15.3:80/auth/auth/login → 405 Not Allowed
+2026-11-18 16:39:49,326 [DEBUG] api.client (client.py:97):   response (non-json): <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-11-18 16:39:49,326 [ERROR] api.endpoints.auth_api (auth_api.py:72): 登录返回非 JSON: <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-11-18 16:39:49,328 [INFO] conftest (conftest.py:383): ✅ 测试结束: test_login_api_reachable
+2026-11-18 16:39:49,334 [INFO] conftest (conftest.py:372): ============================================================
+2026-11-18 16:39:49,334 [INFO] conftest (conftest.py:373): 🧪 开始测试: test_login_response_format
+2026-11-18 16:39:49,334 [INFO] conftest (conftest.py:375):    描述: 验证：登录响应格式符合预期结构
+2026-11-18 16:39:49,335 [INFO] api.client (client.py:77): [API] POST http://10.200.15.3:80/auth/auth/login
+2026-11-18 16:39:49,335 [DEBUG] api.client (client.py:84):   json: {'loginId': 'admin', 'password': '******'}
+2026-11-18 16:39:49,337 [INFO] api.client (client.py:88): [API] POST http://10.200.15.3:80/auth/auth/login → 405 Not Allowed
+2026-11-18 16:39:49,337 [DEBUG] api.client (client.py:97):   response (non-json): <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-11-18 16:39:49,337 [ERROR] api.endpoints.auth_api (auth_api.py:72): 登录返回非 JSON: <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-11-18 16:39:49,339 [INFO] conftest (conftest.py:383): ✅ 测试结束: test_login_response_format
+2026-11-18 16:39:49,344 [INFO] conftest (conftest.py:372): ============================================================
+2026-11-18 16:39:49,344 [INFO] conftest (conftest.py:373): 🧪 开始测试: test_login_wrong_password
+2026-11-18 16:39:49,345 [INFO] conftest (conftest.py:375):    描述: 验证：错误密码返回明确的错误提示
+2026-11-18 16:39:49,345 [INFO] api.client (client.py:77): [API] POST http://10.200.15.3:80/auth/auth/login
+2026-11-18 16:39:49,345 [DEBUG] api.client (client.py:84):   json: {'loginId': 'admin', 'password': '******'}
+2026-11-18 16:39:49,347 [INFO] api.client (client.py:88): [API] POST http://10.200.15.3:80/auth/auth/login → 405 Not Allowed
+2026-11-18 16:39:49,347 [DEBUG] api.client (client.py:97):   response (non-json): <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-11-18 16:39:49,347 [ERROR] api.endpoints.auth_api (auth_api.py:72): 登录返回非 JSON: <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-11-18 16:39:49,347 [INFO] tests.api.test_auth_api (test_auth_api.py:70): 错误提示: 非 JSON 响应: Expecting value: line 1 column 1 (char 0)
+2026-11-18 16:39:49,348 [INFO] conftest (conftest.py:383): ✅ 测试结束: test_login_wrong_password
+2026-11-18 16:39:49,353 [INFO] conftest (conftest.py:372): ============================================================
+2026-11-18 16:39:49,353 [INFO] conftest (conftest.py:373): 🧪 开始测试: test_login_boundary_values[empty_password]
+2026-11-18 16:39:49,353 [INFO] conftest (conftest.py:375):    描述: 参数化验证：各种边界凭证下登录接口的行为
+2026-11-18 16:39:49,354 [INFO] api.client (client.py:77): [API] POST http://10.200.15.3:80/auth/auth/login
+2026-11-18 16:39:49,354 [DEBUG] api.client (client.py:84):   json: {'loginId': 'admin', 'password': '******'}
+2026-11-18 16:39:49,356 [INFO] api.client (client.py:88): [API] POST http://10.200.15.3:80/auth/auth/login → 405 Not Allowed
+2026-11-18 16:39:49,356 [DEBUG] api.client (client.py:97):   response (non-json): <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-11-18 16:39:49,356 [ERROR] api.endpoints.auth_api (auth_api.py:72): 登录返回非 JSON: <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-11-18 16:39:49,359 [INFO] conftest (conftest.py:383): ✅ 测试结束: test_login_boundary_values[empty_password]
+2026-11-18 16:39:49,364 [INFO] conftest (conftest.py:372): ============================================================
+2026-11-18 16:39:49,364 [INFO] conftest (conftest.py:373): 🧪 开始测试: test_login_boundary_values[empty_username]
+2026-11-18 16:39:49,364 [INFO] conftest (conftest.py:375):    描述: 参数化验证：各种边界凭证下登录接口的行为
+2026-11-18 16:39:49,365 [INFO] api.client (client.py:77): [API] POST http://10.200.15.3:80/auth/auth/login
+2026-11-18 16:39:49,365 [DEBUG] api.client (client.py:84):   json: {'loginId': '', 'password': '******'}
+2026-11-18 16:39:49,367 [INFO] api.client (client.py:88): [API] POST http://10.200.15.3:80/auth/auth/login → 405 Not Allowed
+2026-11-18 16:39:49,367 [DEBUG] api.client (client.py:97):   response (non-json): <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-11-18 16:39:49,367 [ERROR] api.endpoints.auth_api (auth_api.py:72): 登录返回非 JSON: <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-11-18 16:39:49,370 [INFO] conftest (conftest.py:383): ✅ 测试结束: test_login_boundary_values[empty_username]
+2026-11-18 16:39:49,376 [INFO] conftest (conftest.py:372): ============================================================
+2026-11-18 16:39:49,376 [INFO] conftest (conftest.py:373): 🧪 开始测试: test_login_boundary_values[wrong_password]
+2026-11-18 16:39:49,376 [INFO] conftest (conftest.py:375):    描述: 参数化验证：各种边界凭证下登录接口的行为
+2026-11-18 16:39:49,377 [INFO] api.client (client.py:77): [API] POST http://10.200.15.3:80/auth/auth/login
+2026-11-18 16:39:49,377 [DEBUG] api.client (client.py:84):   json: {'loginId': 'admin', 'password': '******'}
+2026-11-18 16:39:49,379 [INFO] api.client (client.py:88): [API] POST http://10.200.15.3:80/auth/auth/login → 405 Not Allowed
+2026-11-18 16:39:49,379 [DEBUG] api.client (client.py:97):   response (non-json): <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-11-18 16:39:49,379 [ERROR] api.endpoints.auth_api (auth_api.py:72): 登录返回非 JSON: <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-11-18 16:39:49,382 [INFO] conftest (conftest.py:383): ✅ 测试结束: test_login_boundary_values[wrong_password]
+2026-11-18 16:39:49,387 [INFO] conftest (conftest.py:372): ============================================================
+2026-11-18 16:39:49,387 [INFO] conftest (conftest.py:373): 🧪 开始测试: test_login_boundary_values[nonexistent_user]
+2026-11-18 16:39:49,387 [INFO] conftest (conftest.py:375):    描述: 参数化验证：各种边界凭证下登录接口的行为
+2026-11-18 16:39:49,388 [INFO] api.client (client.py:77): [API] POST http://10.200.15.3:80/auth/auth/login
+2026-11-18 16:39:49,388 [DEBUG] api.client (client.py:84):   json: {'loginId': 'nonexistent_user', 'password': '******'}
+2026-11-18 16:39:49,390 [INFO] api.client (client.py:88): [API] POST http://10.200.15.3:80/auth/auth/login → 405 Not Allowed
+2026-11-18 16:39:49,390 [DEBUG] api.client (client.py:97):   response (non-json): <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-11-18 16:39:49,390 [ERROR] api.endpoints.auth_api (auth_api.py:72): 登录返回非 JSON: <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-11-18 16:39:49,393 [INFO] conftest (conftest.py:383): ✅ 测试结束: test_login_boundary_values[nonexistent_user]
+2026-11-18 16:39:49,397 [INFO] conftest (conftest.py:372): ============================================================
+2026-11-18 16:39:49,398 [INFO] conftest (conftest.py:373): 🧪 开始测试: test_login_boundary_values[valid_credentials_contract]
+2026-11-18 16:39:49,398 [INFO] conftest (conftest.py:375):    描述: 参数化验证：各种边界凭证下登录接口的行为
+2026-11-18 16:39:49,398 [INFO] api.client (client.py:77): [API] POST http://10.200.15.3:80/auth/auth/login
+2026-11-18 16:39:49,399 [DEBUG] api.client (client.py:84):   json: {'loginId': 'admin_01', 'password': '******'}
+2026-11-18 16:39:49,400 [INFO] api.client (client.py:88): [API] POST http://10.200.15.3:80/auth/auth/login → 405 Not Allowed
+2026-11-18 16:39:49,400 [DEBUG] api.client (client.py:97):   response (non-json): <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-11-18 16:39:49,401 [ERROR] api.endpoints.auth_api (auth_api.py:72): 登录返回非 JSON: <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-11-18 16:39:49,403 [INFO] conftest (conftest.py:383): ✅ 测试结束: test_login_boundary_values[valid_credentials_contract]
+2026-11-18 16:39:49,408 [INFO] conftest (conftest.py:372): ============================================================
+2026-11-18 16:39:49,408 [INFO] conftest (conftest.py:373): 🧪 开始测试: test_get_user_info
+2026-11-18 16:39:49,409 [INFO] conftest (conftest.py:375):    描述: 验证：未登录状态下获取用户信息
+2026-11-18 16:39:49,409 [INFO] api.client (client.py:77): [API] GET http://10.200.15.3:80/auth/account/findAccountDetail
+2026-11-18 16:39:49,413 [INFO] api.client (client.py:88): [API] GET http://10.200.15.3:80/auth/account/findAccountDetail → 200 OK
+2026-11-18 16:39:49,413 [DEBUG] api.client (client.py:97):   response (non-json): <!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-
+2026-11-18 16:39:49,414 [INFO] conftest (conftest.py:383): ✅ 测试结束: test_get_user_info
+2026-11-18 16:39:49,420 [INFO] conftest (conftest.py:372): ============================================================
+2026-11-18 16:39:49,420 [INFO] conftest (conftest.py:373): 🧪 开始测试: test_login_api_interface
+2026-11-18 16:39:49,420 [INFO] conftest (conftest.py:375):    描述: 验证登录 API 接口：
+        1. API 返回 200（服务可达）
+        2. 响应格式符合预期结构
+        3. 错误场景返回明确提示
+2026-11-18 16:39:49,421 [INFO] api.client (client.py:77): [API] POST http://10.200.15.3:80/auth/auth/login
+2026-11-18 16:39:49,421 [DEBUG] api.client (client.py:84):   json: {'loginId': 'admin', 'password': '******'}
+2026-11-18 16:39:49,423 [INFO] api.client (client.py:88): [API] POST http://10.200.15.3:80/auth/auth/login → 405 Not Allowed
+2026-11-18 16:39:49,423 [DEBUG] api.client (client.py:97):   response (non-json): <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-11-18 16:39:49,423 [ERROR] api.endpoints.auth_api (auth_api.py:72): 登录返回非 JSON: <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-11-18 16:39:49,425 [INFO] conftest (conftest.py:383): ✅ 测试结束: test_login_api_interface
+2026-11-18 16:39:49,430 [INFO] conftest (conftest.py:372): ============================================================
+2026-11-18 16:39:49,430 [INFO] conftest (conftest.py:373): 🧪 开始测试: test_login_page_accessible
+2026-11-18 16:39:49,430 [INFO] conftest (conftest.py:375):    描述: 验证登录页面：
+        1. 页面可访问
+        2. 关键元素可见（用户名、密码输入框，登录按钮）
+2026-11-18 16:39:49,717 [INFO] ui.browser (browser.py:99): 启动浏览器: type=chromium, headless=False, channel=chrome
+2026-11-18 16:39:50,119 [INFO] ui.browser (browser.py:125): 新页面已创建，viewport=None
+2026-11-18 16:39:50,120 [INFO] ui.pages.base_page (base_page.py:69): 导航到: http://10.200.15.3/login
+2026-11-18 16:39:51,225 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#loginId
+2026-11-18 16:39:51,231 [INFO] ui.assertions (assertions.py:72): ✅ 用户名输入框 可见
+2026-11-18 16:39:51,234 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#password
+2026-11-18 16:39:51,240 [INFO] ui.assertions (assertions.py:72): ✅ 密码输入框 可见
+2026-11-18 16:39:51,244 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-btn-primary
+2026-11-18 16:39:51,249 [INFO] ui.assertions (assertions.py:72): ✅ 登录按钮 可见
+2026-11-18 16:39:51,264 [INFO] conftest (conftest.py:383): ✅ 测试结束: test_login_page_accessible
+2026-11-18 16:39:51,274 [INFO] conftest (conftest.py:372): ============================================================
+2026-11-18 16:39:51,274 [INFO] conftest (conftest.py:373): 🧪 开始测试: test_login_empty_ui[empty_username_and_password]
+2026-11-18 16:39:51,274 [INFO] conftest (conftest.py:375):    描述: 验证：点击登录按钮时，空用户名/密码的校验提示
+2026-11-18 16:39:51,469 [INFO] ui.browser (browser.py:125): 新页面已创建，viewport=None
+2026-11-18 16:39:51,471 [INFO] ui.pages.base_page (base_page.py:69): 导航到: http://10.200.15.3/login
+2026-11-18 16:39:52,536 [INFO] ui.pages.login_page (login_page.py:75): 登录操作: username=
+2026-11-18 16:39:52,550 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#loginId
+2026-11-18 16:39:52,765 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#password
+2026-11-18 16:39:52,978 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-btn-primary
+2026-11-18 16:39:53,222 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-notification-notice
+2026-11-18 16:39:53,263 [INFO] ui.assertions (assertions.py:72): ✅ 错误提示 可见
+2026-11-18 16:39:53,272 [INFO] conftest (conftest.py:383): ✅ 测试结束: test_login_empty_ui[empty_username_and_password]
+2026-11-18 16:39:53,279 [INFO] conftest (conftest.py:372): ============================================================
+2026-11-18 16:39:53,279 [INFO] conftest (conftest.py:373): 🧪 开始测试: test_login_empty_ui[empty_password]
+2026-11-18 16:39:53,279 [INFO] conftest (conftest.py:375):    描述: 验证：点击登录按钮时，空用户名/密码的校验提示
+2026-11-18 16:39:53,440 [INFO] ui.browser (browser.py:125): 新页面已创建，viewport=None
+2026-11-18 16:39:53,441 [INFO] ui.pages.base_page (base_page.py:69): 导航到: http://10.200.15.3/login
+2026-11-18 16:39:54,447 [INFO] ui.pages.login_page (login_page.py:75): 登录操作: username=admin
+2026-11-18 16:39:54,463 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#loginId
+2026-11-18 16:39:54,681 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#password
+2026-11-18 16:39:54,892 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-btn-primary
+2026-11-18 16:39:55,137 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-notification-notice
+2026-11-18 16:39:55,224 [INFO] ui.assertions (assertions.py:72): ✅ 错误提示 可见
+2026-11-18 16:39:55,233 [INFO] conftest (conftest.py:383): ✅ 测试结束: test_login_empty_ui[empty_password]
+2026-11-18 16:39:55,244 [INFO] conftest (conftest.py:372): ============================================================
+2026-11-18 16:39:55,245 [INFO] conftest (conftest.py:373): 🧪 开始测试: test_login_page_loaded
+2026-11-18 16:39:55,245 [INFO] conftest (conftest.py:375):    描述: 验证：登录页面正常加载，关键元素可见
+2026-11-18 16:39:55,431 [INFO] ui.browser (browser.py:125): 新页面已创建，viewport=None
+2026-11-18 16:39:55,431 [INFO] ui.pages.base_page (base_page.py:69): 导航到: http://10.200.15.3/login
+2026-11-18 16:39:56,420 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#loginId
+2026-11-18 16:39:56,424 [INFO] ui.assertions (assertions.py:72): ✅ 用户名输入框 可见
+2026-11-18 16:39:56,426 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#password
+2026-11-18 16:39:56,428 [INFO] ui.assertions (assertions.py:72): ✅ 密码输入框 可见
+2026-11-18 16:39:56,430 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-btn-primary
+2026-11-18 16:39:56,433 [INFO] ui.assertions (assertions.py:72): ✅ 登录按钮 可见
+2026-11-18 16:39:56,442 [INFO] conftest (conftest.py:383): ✅ 测试结束: test_login_page_loaded
+2026-11-18 16:39:56,450 [INFO] conftest (conftest.py:372): ============================================================
+2026-11-18 16:39:56,450 [INFO] conftest (conftest.py:373): 🧪 开始测试: test_forgot_password_link
+2026-11-18 16:39:56,451 [INFO] conftest (conftest.py:375):    描述: 验证：页面包含"忘记密码"链接
+2026-11-18 16:39:56,602 [INFO] ui.browser (browser.py:125): 新页面已创建，viewport=None
+2026-11-18 16:39:56,603 [INFO] ui.pages.base_page (base_page.py:69): 导航到: http://10.200.15.3/login
+2026-11-18 16:39:57,643 [DEBUG] ui.locator (locator.py:104): 定位元素: by=text, value=找回密码
+2026-11-18 16:39:57,663 [INFO] ui.assertions (assertions.py:72): ✅ 忘记密码链接 可见
+2026-11-18 16:39:57,672 [INFO] conftest (conftest.py:383): ✅ 测试结束: test_forgot_password_link
+2026-11-18 16:39:57,680 [INFO] conftest (conftest.py:372): ============================================================
+2026-11-18 16:39:57,681 [INFO] conftest (conftest.py:373): 🧪 开始测试: test_login_success[valid_admin]
+2026-11-18 16:39:57,681 [INFO] conftest (conftest.py:375):    描述: 验证：正确用户名和密码可以成功登录
+2026-11-18 16:39:57,872 [INFO] ui.browser (browser.py:125): 新页面已创建，viewport=None
+2026-11-18 16:39:57,873 [INFO] ui.pages.base_page (base_page.py:69): 导航到: http://10.200.15.3/login
+2026-11-18 16:39:58,950 [INFO] ui.pages.login_page (login_page.py:75): 登录操作: username=admin_01
+2026-11-18 16:39:58,965 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#loginId
+2026-11-18 16:39:59,181 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#password
+2026-11-18 16:39:59,394 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-btn-primary
+2026-11-18 16:39:59,637 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.avatar-content
+2026-11-18 16:40:02,474 [INFO] ui.assertions (assertions.py:72): ✅ 登录成功提示 可见
+2026-11-18 16:40:02,474 [INFO] ui.pages.login_page (login_page.py:133): ✅ 登录验证成功
+2026-11-18 16:40:02,482 [INFO] conftest (conftest.py:383): ✅ 测试结束: test_login_success[valid_admin]
+2026-11-18 16:40:02,489 [INFO] conftest (conftest.py:372): ============================================================
+2026-11-18 16:40:02,489 [INFO] conftest (conftest.py:373): 🧪 开始测试: test_login_failed_wrong_password[wrong_password]
+2026-11-18 16:40:02,489 [INFO] conftest (conftest.py:375):    描述: 验证：错误密码登录应显示错误提示
+2026-11-18 16:40:02,649 [INFO] ui.browser (browser.py:125): 新页面已创建，viewport=None
+2026-11-18 16:40:02,650 [INFO] ui.pages.base_page (base_page.py:69): 导航到: http://10.200.15.3/login
+2026-11-18 16:40:03,728 [INFO] ui.pages.login_page (login_page.py:75): 登录操作: username=admin
+2026-11-18 16:40:03,742 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#loginId
+2026-11-18 16:40:03,963 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#password
+2026-11-18 16:40:04,176 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-btn-primary
+2026-11-18 16:40:04,421 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-notification-notice
+2026-11-18 16:40:04,609 [INFO] ui.assertions (assertions.py:72): ✅ 错误提示 可见
+2026-11-18 16:40:04,609 [INFO] ui.pages.login_page (login_page.py:144): ✅ 登录失败验证成功
+2026-11-18 16:40:04,616 [INFO] conftest (conftest.py:383): ✅ 测试结束: test_login_failed_wrong_password[wrong_password]
+2026-11-18 16:40:04,624 [INFO] conftest (conftest.py:372): ============================================================
+2026-11-18 16:40:04,624 [INFO] conftest (conftest.py:373): 🧪 开始测试: test_login_boundary_values[empty_username]
+2026-11-18 16:40:04,624 [INFO] conftest (conftest.py:375):    描述: 参数化验证：空用户名/空密码等边界场景的校验提示
+2026-11-18 16:40:04,795 [INFO] ui.browser (browser.py:125): 新页面已创建，viewport=None
+2026-11-18 16:40:04,796 [INFO] ui.pages.base_page (base_page.py:69): 导航到: http://10.200.15.3/login
+2026-11-18 16:40:05,872 [INFO] ui.pages.login_page (login_page.py:75): 登录操作: username=
+2026-11-18 16:40:05,886 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#loginId
+2026-11-18 16:40:06,097 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#password
+2026-11-18 16:40:06,310 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-btn-primary
+2026-11-18 16:40:06,553 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-notification-notice
+2026-11-18 16:40:06,657 [INFO] ui.assertions (assertions.py:72): ✅ 错误提示 可见
+2026-11-18 16:40:06,659 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-notification-notice
+2026-11-18 16:40:06,661 [INFO] ui.assertions (assertions.py:125): ✅ 错误提示文本 包含文本: '账号'
+2026-11-18 16:40:06,661 [INFO] ui.pages.login_page (login_page.py:144): ✅ 登录失败验证成功
+2026-11-18 16:40:06,670 [INFO] conftest (conftest.py:383): ✅ 测试结束: test_login_boundary_values[empty_username]
+2026-11-18 16:40:06,678 [INFO] conftest (conftest.py:372): ============================================================
+2026-11-18 16:40:06,678 [INFO] conftest (conftest.py:373): 🧪 开始测试: test_login_boundary_values[empty_password]
+2026-11-18 16:40:06,678 [INFO] conftest (conftest.py:375):    描述: 参数化验证：空用户名/空密码等边界场景的校验提示
+2026-11-18 16:40:06,883 [INFO] ui.browser (browser.py:125): 新页面已创建，viewport=None
+2026-11-18 16:40:06,884 [INFO] ui.pages.base_page (base_page.py:69): 导航到: http://10.200.15.3/login
+2026-11-18 16:40:07,947 [INFO] ui.pages.login_page (login_page.py:75): 登录操作: username=admin
+2026-11-18 16:40:07,962 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#loginId
+2026-11-18 16:40:08,176 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#password
+2026-11-18 16:40:08,386 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-btn-primary
+2026-11-18 16:40:08,639 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-notification-notice
+2026-11-18 16:40:08,728 [INFO] ui.assertions (assertions.py:72): ✅ 错误提示 可见
+2026-11-18 16:40:08,730 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-notification-notice
+2026-11-18 16:40:08,732 [INFO] ui.assertions (assertions.py:125): ✅ 错误提示文本 包含文本: '密码'
+2026-11-18 16:40:08,733 [INFO] ui.pages.login_page (login_page.py:144): ✅ 登录失败验证成功
+2026-11-18 16:40:08,741 [INFO] conftest (conftest.py:383): ✅ 测试结束: test_login_boundary_values[empty_password]
+2026-11-18 16:40:08,748 [INFO] conftest (conftest.py:372): ============================================================
+2026-11-18 16:40:08,748 [INFO] conftest (conftest.py:373): 🧪 开始测试: test_login_boundary_values[short_password]
+2026-11-18 16:40:08,748 [INFO] conftest (conftest.py:375):    描述: 参数化验证：空用户名/空密码等边界场景的校验提示
+2026-11-18 16:40:08,915 [INFO] ui.browser (browser.py:125): 新页面已创建，viewport=None
+2026-11-18 16:40:08,916 [INFO] ui.pages.base_page (base_page.py:69): 导航到: http://10.200.15.3/login
+2026-11-18 16:40:09,963 [INFO] ui.pages.login_page (login_page.py:75): 登录操作: username=admin
+2026-11-18 16:40:09,977 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#loginId
+2026-11-18 16:40:10,201 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#password
+2026-11-18 16:40:10,414 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-btn-primary
+2026-11-18 16:40:10,653 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-notification-notice
+2026-11-18 16:40:10,843 [INFO] ui.assertions (assertions.py:72): ✅ 错误提示 可见
+2026-11-18 16:40:10,843 [INFO] ui.pages.login_page (login_page.py:144): ✅ 登录失败验证成功
+2026-11-18 16:40:10,850 [INFO] conftest (conftest.py:383): ✅ 测试结束: test_login_boundary_values[short_password]
+2026-11-18 16:40:10,864 [INFO] conftest (conftest.py:372): ============================================================
+2026-11-18 16:40:10,864 [INFO] conftest (conftest.py:373): 🧪 开始测试: test_login_retry_after_failure[login_retry_after_failure]
+2026-11-18 16:40:10,864 [INFO] conftest (conftest.py:375):    描述: 验证：首次用错误密码登录失败后，修正密码可立即重新登录成功
+2026-11-18 16:40:11,030 [INFO] ui.browser (browser.py:125): 新页面已创建，viewport=None
+2026-11-18 16:40:11,030 [INFO] ui.pages.base_page (base_page.py:69): 导航到: http://10.200.15.3/login
+2026-11-18 16:40:12,106 [INFO] ui.pages.login_page (login_page.py:75): 登录操作: username=admin_01
+2026-11-18 16:40:12,121 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#loginId
+2026-11-18 16:40:12,336 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#password
+2026-11-18 16:40:12,549 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-btn-primary
+2026-11-18 16:40:12,805 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-notification-notice
+2026-11-18 16:40:12,994 [INFO] ui.assertions (assertions.py:72): ✅ 错误提示 可见
+2026-11-18 16:40:12,994 [INFO] ui.pages.login_page (login_page.py:144): ✅ 登录失败验证成功
+2026-11-18 16:40:12,996 [INFO] ui.assertions (assertions.py:150): ✅ URL 包含: 'login'
+2026-11-18 16:40:12,996 [INFO] ui.pages.login_page (login_page.py:102): ✅ 仍在登录页
+2026-11-18 16:40:12,998 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#password
+2026-11-18 16:40:13,208 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-btn-primary
+2026-11-18 16:40:13,728 [INFO] ui.pages.login_page (login_page.py:110): ✅ 已离开登录页: http://10.200.15.3/
+2026-11-18 16:40:13,730 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#loginId
+2026-11-18 16:40:13,731 [INFO] ui.assertions (assertions.py:82): ✅ 登录表单 已隐藏
+2026-11-18 16:40:13,742 [INFO] conftest (conftest.py:383): ✅ 测试结束: test_login_retry_after_failure[login_retry_after_failure]
+2026-11-18 16:40:13,748 [INFO] conftest (conftest.py:372): ============================================================
+2026-11-18 16:40:13,749 [INFO] conftest (conftest.py:373): 🧪 开始测试: test_account_id_matches_login_user[personal_center_account_id]
+2026-11-18 16:40:13,749 [INFO] conftest (conftest.py:375):    描述: 验证：个人中心页面展示的账号 id 与登录使用的账号一致
+2026-11-18 16:40:13,919 [INFO] ui.browser (browser.py:125): 新页面已创建，viewport=None
+2026-11-18 16:40:13,920 [INFO] ui.pages.base_page (base_page.py:69): 导航到: http://10.200.15.3/login
+2026-11-18 16:40:14,971 [INFO] ui.pages.login_page (login_page.py:75): 登录操作: username=admin_01
+2026-11-18 16:40:14,986 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#loginId
+2026-11-18 16:40:15,202 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#password
+2026-11-18 16:40:15,414 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-btn-primary
+2026-11-18 16:40:17,498 [INFO] ui.assertions (assertions.py:150): ✅ URL 包含: 'home'
+2026-11-18 16:40:17,509 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.avatar-content
+2026-11-18 16:40:17,528 [INFO] ui.assertions (assertions.py:72): ✅ 右上角头像 可见
+2026-11-18 16:40:17,528 [INFO] ui.pages.home_page (home_page.py:61): ✅ 已进入首页
+2026-11-18 16:40:17,528 [INFO] ui.pages.home_page (home_page.py:47): hover 右上角头像，触发账号下拉
+2026-11-18 16:40:17,536 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.avatar-content
+2026-11-18 16:40:17,795 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.avatar-dropdown-wrapper
+2026-11-18 16:40:17,805 [INFO] ui.assertions (assertions.py:72): ✅ 账号下拉菜单 可见
+2026-11-18 16:40:17,806 [DEBUG] ui.locator (locator.py:104): 定位元素: by=text, value=个人中心
+2026-11-18 16:40:17,809 [INFO] ui.assertions (assertions.py:72): ✅ 菜单项-个人中心 可见
+2026-11-18 16:40:17,809 [INFO] ui.pages.home_page (home_page.py:53): 点击菜单项: 个人中心
+2026-11-18 16:40:17,809 [DEBUG] ui.locator (locator.py:104): 定位元素: by=text, value=个人中心
+2026-11-18 16:40:18,277 [INFO] ui.assertions (assertions.py:150): ✅ URL 包含: 'account/settings'
+2026-11-18 16:40:18,278 [INFO] ui.pages.personal_center_page (personal_center_page.py:41): ✅ 已进入个人中心页面
+2026-11-18 16:40:18,280 [DEBUG] ui.locator (locator.py:104): 定位元素: by=xpath, value=//span[contains(@class,'ant-descriptions-item-label')][normalize-space()='账号']/following-sibling::span[contains(@class,'ant-descriptions-item-content')]
+2026-11-18 16:40:18,282 [INFO] ui.assertions (assertions.py:114): ✅ 个人中心账号id 文本匹配: 'admin_01'
+2026-11-18 16:40:18,282 [INFO] ui.pages.personal_center_page (personal_center_page.py:52): ✅ 账号 id 与登录账号一致: admin_01
+2026-11-18 16:40:18,294 [INFO] conftest (conftest.py:383): ✅ 测试结束: test_account_id_matches_login_user[personal_center_account_id]
+2026-11-18 16:40:18,534 [INFO] ui.browser (browser.py:155): 浏览器资源已释放
+2026-11-18 16:40:18,547 [INFO] conftest (conftest.py:204): 🏁 测试会话结束 — 退出码: 0
+2026-11-18 16:40:18,547 [INFO] conftest (conftest.py:232): ⏭️ 已跳过 Allure 报告生成（--no-report）
+2026-11-18 16:48:32,566 [INFO] conftest (conftest.py:139): 📁 Allure 结果目录已重置: C:\Users\Administrator\Desktop\auto-test-framework\reports\allure-results
+2026-11-18 16:48:32,571 [INFO] conftest (conftest.py:180): 📜 已从 26-11-17_23-51-58 复制历史趋势数据
+2026-11-18 16:48:32,572 [INFO] conftest (conftest.py:274): 📝 Allure 环境信息已写入: C:\Users\Administrator\Desktop\auto-test-framework\reports\allure-results\environment.properties
+2026-11-18 16:48:32,572 [INFO] conftest (conftest.py:151): 🚀 测试会话启动 — 环境: dev, 目标: http://10.200.15.3/
+2026-11-18 16:48:32,679 [INFO] conftest (conftest.py:359): ============================================================
+2026-11-18 16:48:32,679 [INFO] conftest (conftest.py:360): 🧪 开始测试: test_login_api_reachable
+2026-11-18 16:48:32,680 [INFO] conftest (conftest.py:362):    描述: 验证：登录接口 HTTP 可达，返回 200
+2026-11-18 16:48:32,680 [INFO] api.client (client.py:77): [API] POST http://10.200.15.3:80/auth/auth/login
+2026-11-18 16:48:32,681 [DEBUG] api.client (client.py:84):   json: {'loginId': 'admin', 'password': '******'}
+2026-11-18 16:48:32,687 [INFO] api.client (client.py:88): [API] POST http://10.200.15.3:80/auth/auth/login → 405 Not Allowed
+2026-11-18 16:48:32,687 [DEBUG] api.client (client.py:97):   response (non-json): <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-11-18 16:48:32,687 [ERROR] api.endpoints.auth_api (auth_api.py:72): 登录返回非 JSON: <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-11-18 16:48:32,689 [INFO] conftest (conftest.py:370): ✅ 测试结束: test_login_api_reachable
+2026-11-18 16:48:32,695 [INFO] conftest (conftest.py:359): ============================================================
+2026-11-18 16:48:32,695 [INFO] conftest (conftest.py:360): 🧪 开始测试: test_login_response_format
+2026-11-18 16:48:32,695 [INFO] conftest (conftest.py:362):    描述: 验证：登录响应格式符合预期结构
+2026-11-18 16:48:32,695 [INFO] api.client (client.py:77): [API] POST http://10.200.15.3:80/auth/auth/login
+2026-11-18 16:48:32,696 [DEBUG] api.client (client.py:84):   json: {'loginId': 'admin', 'password': '******'}
+2026-11-18 16:48:32,698 [INFO] api.client (client.py:88): [API] POST http://10.200.15.3:80/auth/auth/login → 405 Not Allowed
+2026-11-18 16:48:32,698 [DEBUG] api.client (client.py:97):   response (non-json): <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-11-18 16:48:32,698 [ERROR] api.endpoints.auth_api (auth_api.py:72): 登录返回非 JSON: <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-11-18 16:48:32,700 [INFO] conftest (conftest.py:370): ✅ 测试结束: test_login_response_format
+2026-11-18 16:48:32,705 [INFO] conftest (conftest.py:359): ============================================================
+2026-11-18 16:48:32,706 [INFO] conftest (conftest.py:360): 🧪 开始测试: test_login_wrong_password
+2026-11-18 16:48:32,706 [INFO] conftest (conftest.py:362):    描述: 验证：错误密码返回明确的错误提示
+2026-11-18 16:48:32,706 [INFO] api.client (client.py:77): [API] POST http://10.200.15.3:80/auth/auth/login
+2026-11-18 16:48:32,707 [DEBUG] api.client (client.py:84):   json: {'loginId': 'admin', 'password': '******'}
+2026-11-18 16:48:32,708 [INFO] api.client (client.py:88): [API] POST http://10.200.15.3:80/auth/auth/login → 405 Not Allowed
+2026-11-18 16:48:32,708 [DEBUG] api.client (client.py:97):   response (non-json): <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-11-18 16:48:32,708 [ERROR] api.endpoints.auth_api (auth_api.py:72): 登录返回非 JSON: <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-11-18 16:48:32,708 [INFO] tests.api.test_auth_api (test_auth_api.py:70): 错误提示: 非 JSON 响应: Expecting value: line 1 column 1 (char 0)
+2026-11-18 16:48:32,709 [INFO] conftest (conftest.py:370): ✅ 测试结束: test_login_wrong_password
+2026-11-18 16:48:32,714 [INFO] conftest (conftest.py:359): ============================================================
+2026-11-18 16:48:32,714 [INFO] conftest (conftest.py:360): 🧪 开始测试: test_login_boundary_values[empty_password]
+2026-11-18 16:48:32,714 [INFO] conftest (conftest.py:362):    描述: 参数化验证：各种边界凭证下登录接口的行为
+2026-11-18 16:48:32,715 [INFO] api.client (client.py:77): [API] POST http://10.200.15.3:80/auth/auth/login
+2026-11-18 16:48:32,715 [DEBUG] api.client (client.py:84):   json: {'loginId': 'admin', 'password': '******'}
+2026-11-18 16:48:32,718 [INFO] api.client (client.py:88): [API] POST http://10.200.15.3:80/auth/auth/login → 405 Not Allowed
+2026-11-18 16:48:32,719 [DEBUG] api.client (client.py:97):   response (non-json): <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-11-18 16:48:32,719 [ERROR] api.endpoints.auth_api (auth_api.py:72): 登录返回非 JSON: <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-11-18 16:48:32,722 [INFO] conftest (conftest.py:370): ✅ 测试结束: test_login_boundary_values[empty_password]
+2026-11-18 16:48:32,727 [INFO] conftest (conftest.py:359): ============================================================
+2026-11-18 16:48:32,728 [INFO] conftest (conftest.py:360): 🧪 开始测试: test_login_boundary_values[empty_username]
+2026-11-18 16:48:32,728 [INFO] conftest (conftest.py:362):    描述: 参数化验证：各种边界凭证下登录接口的行为
+2026-11-18 16:48:32,729 [INFO] api.client (client.py:77): [API] POST http://10.200.15.3:80/auth/auth/login
+2026-11-18 16:48:32,729 [DEBUG] api.client (client.py:84):   json: {'loginId': '', 'password': '******'}
+2026-11-18 16:48:32,731 [INFO] api.client (client.py:88): [API] POST http://10.200.15.3:80/auth/auth/login → 405 Not Allowed
+2026-11-18 16:48:32,731 [DEBUG] api.client (client.py:97):   response (non-json): <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-11-18 16:48:32,731 [ERROR] api.endpoints.auth_api (auth_api.py:72): 登录返回非 JSON: <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-11-18 16:48:32,734 [INFO] conftest (conftest.py:370): ✅ 测试结束: test_login_boundary_values[empty_username]
+2026-11-18 16:48:32,744 [INFO] conftest (conftest.py:359): ============================================================
+2026-11-18 16:48:32,744 [INFO] conftest (conftest.py:360): 🧪 开始测试: test_login_boundary_values[wrong_password]
+2026-11-18 16:48:32,744 [INFO] conftest (conftest.py:362):    描述: 参数化验证：各种边界凭证下登录接口的行为
+2026-11-18 16:48:32,746 [INFO] api.client (client.py:77): [API] POST http://10.200.15.3:80/auth/auth/login
+2026-11-18 16:48:32,746 [DEBUG] api.client (client.py:84):   json: {'loginId': 'admin', 'password': '******'}
+2026-11-18 16:48:32,752 [INFO] api.client (client.py:88): [API] POST http://10.200.15.3:80/auth/auth/login → 405 Not Allowed
+2026-11-18 16:48:32,752 [DEBUG] api.client (client.py:97):   response (non-json): <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-11-18 16:48:32,753 [ERROR] api.endpoints.auth_api (auth_api.py:72): 登录返回非 JSON: <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-11-18 16:48:32,756 [INFO] conftest (conftest.py:370): ✅ 测试结束: test_login_boundary_values[wrong_password]
+2026-11-18 16:48:32,763 [INFO] conftest (conftest.py:359): ============================================================
+2026-11-18 16:48:32,763 [INFO] conftest (conftest.py:360): 🧪 开始测试: test_login_boundary_values[nonexistent_user]
+2026-11-18 16:48:32,764 [INFO] conftest (conftest.py:362):    描述: 参数化验证：各种边界凭证下登录接口的行为
+2026-11-18 16:48:32,764 [INFO] api.client (client.py:77): [API] POST http://10.200.15.3:80/auth/auth/login
+2026-11-18 16:48:32,764 [DEBUG] api.client (client.py:84):   json: {'loginId': 'nonexistent_user', 'password': '******'}
+2026-11-18 16:48:32,766 [INFO] api.client (client.py:88): [API] POST http://10.200.15.3:80/auth/auth/login → 405 Not Allowed
+2026-11-18 16:48:32,766 [DEBUG] api.client (client.py:97):   response (non-json): <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-11-18 16:48:32,766 [ERROR] api.endpoints.auth_api (auth_api.py:72): 登录返回非 JSON: <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-11-18 16:48:32,769 [INFO] conftest (conftest.py:370): ✅ 测试结束: test_login_boundary_values[nonexistent_user]
+2026-11-18 16:48:32,776 [INFO] conftest (conftest.py:359): ============================================================
+2026-11-18 16:48:32,776 [INFO] conftest (conftest.py:360): 🧪 开始测试: test_login_boundary_values[valid_credentials_contract]
+2026-11-18 16:48:32,776 [INFO] conftest (conftest.py:362):    描述: 参数化验证：各种边界凭证下登录接口的行为
+2026-11-18 16:48:32,777 [INFO] api.client (client.py:77): [API] POST http://10.200.15.3:80/auth/auth/login
+2026-11-18 16:48:32,777 [DEBUG] api.client (client.py:84):   json: {'loginId': 'admin_01', 'password': '******'}
+2026-11-18 16:48:32,779 [INFO] api.client (client.py:88): [API] POST http://10.200.15.3:80/auth/auth/login → 405 Not Allowed
+2026-11-18 16:48:32,779 [DEBUG] api.client (client.py:97):   response (non-json): <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-11-18 16:48:32,779 [ERROR] api.endpoints.auth_api (auth_api.py:72): 登录返回非 JSON: <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-11-18 16:48:32,781 [INFO] conftest (conftest.py:370): ✅ 测试结束: test_login_boundary_values[valid_credentials_contract]
+2026-11-18 16:48:32,787 [INFO] conftest (conftest.py:359): ============================================================
+2026-11-18 16:48:32,787 [INFO] conftest (conftest.py:360): 🧪 开始测试: test_get_user_info
+2026-11-18 16:48:32,787 [INFO] conftest (conftest.py:362):    描述: 验证：未登录状态下获取用户信息
+2026-11-18 16:48:32,788 [INFO] api.client (client.py:77): [API] GET http://10.200.15.3:80/auth/account/findAccountDetail
+2026-11-18 16:48:32,791 [INFO] api.client (client.py:88): [API] GET http://10.200.15.3:80/auth/account/findAccountDetail → 200 OK
+2026-11-18 16:48:32,791 [DEBUG] api.client (client.py:97):   response (non-json): <!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-
+2026-11-18 16:48:32,792 [INFO] conftest (conftest.py:370): ✅ 测试结束: test_get_user_info
+2026-11-18 16:48:32,798 [INFO] conftest (conftest.py:359): ============================================================
+2026-11-18 16:48:32,798 [INFO] conftest (conftest.py:360): 🧪 开始测试: test_login_api_interface
+2026-11-18 16:48:32,798 [INFO] conftest (conftest.py:362):    描述: 验证登录 API 接口：
+        1. API 返回 200（服务可达）
+        2. 响应格式符合预期结构
+        3. 错误场景返回明确提示
+2026-11-18 16:48:32,799 [INFO] api.client (client.py:77): [API] POST http://10.200.15.3:80/auth/auth/login
+2026-11-18 16:48:32,799 [DEBUG] api.client (client.py:84):   json: {'loginId': 'admin', 'password': '******'}
+2026-11-18 16:48:32,801 [INFO] api.client (client.py:88): [API] POST http://10.200.15.3:80/auth/auth/login → 405 Not Allowed
+2026-11-18 16:48:32,801 [DEBUG] api.client (client.py:97):   response (non-json): <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-11-18 16:48:32,801 [ERROR] api.endpoints.auth_api (auth_api.py:72): 登录返回非 JSON: <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-11-18 16:48:32,803 [INFO] conftest (conftest.py:370): ✅ 测试结束: test_login_api_interface
+2026-11-18 16:48:32,809 [INFO] conftest (conftest.py:359): ============================================================
+2026-11-18 16:48:32,810 [INFO] conftest (conftest.py:360): 🧪 开始测试: test_login_page_accessible
+2026-11-18 16:48:32,810 [INFO] conftest (conftest.py:362):    描述: 验证登录页面：
+        1. 页面可访问
+        2. 关键元素可见（用户名、密码输入框，登录按钮）
+2026-11-18 16:48:33,160 [INFO] ui.browser (browser.py:99): 启动浏览器: type=chromium, headless=False, channel=chrome
+2026-11-18 16:48:33,625 [INFO] ui.browser (browser.py:125): 新页面已创建，viewport=None
+2026-11-18 16:48:33,627 [INFO] ui.pages.base_page (base_page.py:69): 导航到: http://10.200.15.3/login
+2026-11-18 16:48:34,713 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#loginId
+2026-11-18 16:48:34,718 [INFO] ui.assertions (assertions.py:72): ✅ 用户名输入框 可见
+2026-11-18 16:48:34,722 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#password
+2026-11-18 16:48:34,725 [INFO] ui.assertions (assertions.py:72): ✅ 密码输入框 可见
+2026-11-18 16:48:34,727 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-btn-primary
+2026-11-18 16:48:34,729 [INFO] ui.assertions (assertions.py:72): ✅ 登录按钮 可见
+2026-11-18 16:48:34,738 [INFO] conftest (conftest.py:370): ✅ 测试结束: test_login_page_accessible
+2026-11-18 16:48:34,745 [INFO] conftest (conftest.py:359): ============================================================
+2026-11-18 16:48:34,745 [INFO] conftest (conftest.py:360): 🧪 开始测试: test_login_empty_ui[empty_username_and_password]
+2026-11-18 16:48:34,746 [INFO] conftest (conftest.py:362):    描述: 验证：点击登录按钮时，空用户名/密码的校验提示
+2026-11-18 16:48:34,898 [INFO] ui.browser (browser.py:125): 新页面已创建，viewport=None
+2026-11-18 16:48:34,899 [INFO] ui.pages.base_page (base_page.py:69): 导航到: http://10.200.15.3/login
+2026-11-18 16:48:35,931 [INFO] ui.pages.login_page (login_page.py:75): 登录操作: username=
+2026-11-18 16:48:35,946 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#loginId
+2026-11-18 16:48:36,161 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#password
+2026-11-18 16:48:36,372 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-btn-primary
+2026-11-18 16:48:36,623 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-notification-notice
+2026-11-18 16:48:36,664 [INFO] ui.assertions (assertions.py:72): ✅ 错误提示 可见
+2026-11-18 16:48:36,673 [INFO] conftest (conftest.py:370): ✅ 测试结束: test_login_empty_ui[empty_username_and_password]
+2026-11-18 16:48:36,679 [INFO] conftest (conftest.py:359): ============================================================
+2026-11-18 16:48:36,679 [INFO] conftest (conftest.py:360): 🧪 开始测试: test_login_empty_ui[empty_password]
+2026-11-18 16:48:36,679 [INFO] conftest (conftest.py:362):    描述: 验证：点击登录按钮时，空用户名/密码的校验提示
+2026-11-18 16:48:36,812 [INFO] ui.browser (browser.py:125): 新页面已创建，viewport=None
+2026-11-18 16:48:36,813 [INFO] ui.pages.base_page (base_page.py:69): 导航到: http://10.200.15.3/login
+2026-11-18 16:48:37,877 [INFO] ui.pages.login_page (login_page.py:75): 登录操作: username=admin
+2026-11-18 16:48:37,896 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#loginId
+2026-11-18 16:48:38,114 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#password
+2026-11-18 16:48:38,325 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-btn-primary
+2026-11-18 16:48:38,568 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-notification-notice
+2026-11-18 16:48:38,615 [INFO] ui.assertions (assertions.py:72): ✅ 错误提示 可见
+2026-11-18 16:48:38,624 [INFO] conftest (conftest.py:370): ✅ 测试结束: test_login_empty_ui[empty_password]
+2026-11-18 16:48:38,631 [INFO] conftest (conftest.py:359): ============================================================
+2026-11-18 16:48:38,632 [INFO] conftest (conftest.py:360): 🧪 开始测试: test_login_page_loaded
+2026-11-18 16:48:38,632 [INFO] conftest (conftest.py:362):    描述: 验证：登录页面正常加载，关键元素可见
+2026-11-18 16:48:38,787 [INFO] ui.browser (browser.py:125): 新页面已创建，viewport=None
+2026-11-18 16:48:38,788 [INFO] ui.pages.base_page (base_page.py:69): 导航到: http://10.200.15.3/login
+2026-11-18 16:48:39,775 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#loginId
+2026-11-18 16:48:39,779 [INFO] ui.assertions (assertions.py:72): ✅ 用户名输入框 可见
+2026-11-18 16:48:39,780 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#password
+2026-11-18 16:48:39,782 [INFO] ui.assertions (assertions.py:72): ✅ 密码输入框 可见
+2026-11-18 16:48:39,784 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-btn-primary
+2026-11-18 16:48:39,787 [INFO] ui.assertions (assertions.py:72): ✅ 登录按钮 可见
+2026-11-18 16:48:39,794 [INFO] conftest (conftest.py:370): ✅ 测试结束: test_login_page_loaded
+2026-11-18 16:48:39,800 [INFO] conftest (conftest.py:359): ============================================================
+2026-11-18 16:48:39,800 [INFO] conftest (conftest.py:360): 🧪 开始测试: test_forgot_password_link
+2026-11-18 16:48:39,801 [INFO] conftest (conftest.py:362):    描述: 验证：页面包含"忘记密码"链接
+2026-11-18 16:48:40,027 [INFO] ui.browser (browser.py:125): 新页面已创建，viewport=None
+2026-11-18 16:48:40,028 [INFO] ui.pages.base_page (base_page.py:69): 导航到: http://10.200.15.3/login
+2026-11-18 16:48:40,943 [DEBUG] ui.locator (locator.py:104): 定位元素: by=text, value=找回密码
+2026-11-18 16:48:40,960 [INFO] ui.assertions (assertions.py:72): ✅ 忘记密码链接 可见
+2026-11-18 16:48:40,966 [INFO] conftest (conftest.py:370): ✅ 测试结束: test_forgot_password_link
+2026-11-18 16:48:40,975 [INFO] conftest (conftest.py:359): ============================================================
+2026-11-18 16:48:40,975 [INFO] conftest (conftest.py:360): 🧪 开始测试: test_login_success[valid_admin]
+2026-11-18 16:48:40,975 [INFO] conftest (conftest.py:362):    描述: 验证：正确用户名和密码可以成功登录
+2026-11-18 16:48:41,121 [INFO] ui.browser (browser.py:125): 新页面已创建，viewport=None
+2026-11-18 16:48:41,122 [INFO] ui.pages.base_page (base_page.py:69): 导航到: http://10.200.15.3/login
+2026-11-18 16:48:42,141 [INFO] ui.pages.login_page (login_page.py:75): 登录操作: username=admin_01
+2026-11-18 16:48:42,156 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#loginId
+2026-11-18 16:48:42,433 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#password
+2026-11-18 16:48:42,646 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-btn-primary
+2026-11-18 16:48:42,888 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.avatar-content
+2026-11-18 16:48:44,707 [INFO] ui.assertions (assertions.py:72): ✅ 登录成功提示 可见
+2026-11-18 16:48:44,708 [INFO] ui.pages.login_page (login_page.py:133): ✅ 登录验证成功
+2026-11-18 16:48:44,716 [INFO] conftest (conftest.py:370): ✅ 测试结束: test_login_success[valid_admin]
+2026-11-18 16:48:44,725 [INFO] conftest (conftest.py:359): ============================================================
+2026-11-18 16:48:44,725 [INFO] conftest (conftest.py:360): 🧪 开始测试: test_login_failed_wrong_password[wrong_password]
+2026-11-18 16:48:44,725 [INFO] conftest (conftest.py:362):    描述: 验证：错误密码登录应显示错误提示
+2026-11-18 16:48:44,870 [INFO] ui.browser (browser.py:125): 新页面已创建，viewport=None
+2026-11-18 16:48:44,871 [INFO] ui.pages.base_page (base_page.py:69): 导航到: http://10.200.15.3/login
+2026-11-18 16:48:45,879 [INFO] ui.pages.login_page (login_page.py:75): 登录操作: username=admin
+2026-11-18 16:48:45,898 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#loginId
+2026-11-18 16:48:46,118 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#password
+2026-11-18 16:48:46,331 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-btn-primary
+2026-11-18 16:48:46,589 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-notification-notice
+2026-11-18 16:48:46,778 [INFO] ui.assertions (assertions.py:72): ✅ 错误提示 可见
+2026-11-18 16:48:46,778 [INFO] ui.pages.login_page (login_page.py:144): ✅ 登录失败验证成功
+2026-11-18 16:48:46,787 [INFO] conftest (conftest.py:370): ✅ 测试结束: test_login_failed_wrong_password[wrong_password]
+2026-11-18 16:48:46,794 [INFO] conftest (conftest.py:359): ============================================================
+2026-11-18 16:48:46,794 [INFO] conftest (conftest.py:360): 🧪 开始测试: test_login_boundary_values[empty_username]
+2026-11-18 16:48:46,794 [INFO] conftest (conftest.py:362):    描述: 参数化验证：空用户名/空密码等边界场景的校验提示
+2026-11-18 16:48:46,964 [INFO] ui.browser (browser.py:125): 新页面已创建，viewport=None
+2026-11-18 16:48:46,964 [INFO] ui.pages.base_page (base_page.py:69): 导航到: http://10.200.15.3/login
+2026-11-18 16:48:47,950 [INFO] ui.pages.login_page (login_page.py:75): 登录操作: username=
+2026-11-18 16:48:47,964 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#loginId
+2026-11-18 16:48:48,177 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#password
+2026-11-18 16:48:48,392 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-btn-primary
+2026-11-18 16:48:48,638 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-notification-notice
+2026-11-18 16:48:48,683 [INFO] ui.assertions (assertions.py:72): ✅ 错误提示 可见
+2026-11-18 16:48:48,685 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-notification-notice
+2026-11-18 16:48:48,689 [INFO] ui.assertions (assertions.py:125): ✅ 错误提示文本 包含文本: '账号'
+2026-11-18 16:48:48,689 [INFO] ui.pages.login_page (login_page.py:144): ✅ 登录失败验证成功
+2026-11-18 16:48:48,698 [INFO] conftest (conftest.py:370): ✅ 测试结束: test_login_boundary_values[empty_username]
+2026-11-18 16:48:48,707 [INFO] conftest (conftest.py:359): ============================================================
+2026-11-18 16:48:48,708 [INFO] conftest (conftest.py:360): 🧪 开始测试: test_login_boundary_values[empty_password]
+2026-11-18 16:48:48,709 [INFO] conftest (conftest.py:362):    描述: 参数化验证：空用户名/空密码等边界场景的校验提示
+2026-11-18 16:48:48,944 [INFO] ui.browser (browser.py:125): 新页面已创建，viewport=None
+2026-11-18 16:48:48,945 [INFO] ui.pages.base_page (base_page.py:69): 导航到: http://10.200.15.3/login
+2026-11-18 16:48:49,940 [INFO] ui.pages.login_page (login_page.py:75): 登录操作: username=admin
+2026-11-18 16:48:49,957 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#loginId
+2026-11-18 16:48:50,173 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#password
+2026-11-18 16:48:50,384 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-btn-primary
+2026-11-18 16:48:50,641 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-notification-notice
+2026-11-18 16:48:50,673 [INFO] ui.assertions (assertions.py:72): ✅ 错误提示 可见
+2026-11-18 16:48:50,675 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-notification-notice
+2026-11-18 16:48:50,677 [INFO] ui.assertions (assertions.py:125): ✅ 错误提示文本 包含文本: '密码'
+2026-11-18 16:48:50,678 [INFO] ui.pages.login_page (login_page.py:144): ✅ 登录失败验证成功
+2026-11-18 16:48:50,686 [INFO] conftest (conftest.py:370): ✅ 测试结束: test_login_boundary_values[empty_password]
+2026-11-18 16:48:50,694 [INFO] conftest (conftest.py:359): ============================================================
+2026-11-18 16:48:50,694 [INFO] conftest (conftest.py:360): 🧪 开始测试: test_login_boundary_values[short_password]
+2026-11-18 16:48:50,694 [INFO] conftest (conftest.py:362):    描述: 参数化验证：空用户名/空密码等边界场景的校验提示
+2026-11-18 16:48:50,840 [INFO] ui.browser (browser.py:125): 新页面已创建，viewport=None
+2026-11-18 16:48:50,841 [INFO] ui.pages.base_page (base_page.py:69): 导航到: http://10.200.15.3/login
+2026-11-18 16:48:51,850 [INFO] ui.pages.login_page (login_page.py:75): 登录操作: username=admin
+2026-11-18 16:48:51,865 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#loginId
+2026-11-18 16:48:52,084 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#password
+2026-11-18 16:48:52,298 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-btn-primary
+2026-11-18 16:48:52,538 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-notification-notice
+2026-11-18 16:48:52,727 [INFO] ui.assertions (assertions.py:72): ✅ 错误提示 可见
+2026-11-18 16:48:52,727 [INFO] ui.pages.login_page (login_page.py:144): ✅ 登录失败验证成功
+2026-11-18 16:48:52,734 [INFO] conftest (conftest.py:370): ✅ 测试结束: test_login_boundary_values[short_password]
+2026-11-18 16:48:52,746 [INFO] conftest (conftest.py:359): ============================================================
+2026-11-18 16:48:52,747 [INFO] conftest (conftest.py:360): 🧪 开始测试: test_login_retry_after_failure[login_retry_after_failure]
+2026-11-18 16:48:52,747 [INFO] conftest (conftest.py:362):    描述: 验证：首次用错误密码登录失败后，修正密码可立即重新登录成功
+2026-11-18 16:48:52,918 [INFO] ui.browser (browser.py:125): 新页面已创建，viewport=None
+2026-11-18 16:48:52,919 [INFO] ui.pages.base_page (base_page.py:69): 导航到: http://10.200.15.3/login
+2026-11-18 16:48:53,832 [INFO] ui.pages.login_page (login_page.py:75): 登录操作: username=admin_01
+2026-11-18 16:48:53,847 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#loginId
+2026-11-18 16:48:54,060 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#password
+2026-11-18 16:48:54,272 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-btn-primary
+2026-11-18 16:48:54,519 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-notification-notice
+2026-11-18 16:48:54,608 [INFO] ui.assertions (assertions.py:72): ✅ 错误提示 可见
+2026-11-18 16:48:54,609 [INFO] ui.pages.login_page (login_page.py:144): ✅ 登录失败验证成功
+2026-11-18 16:48:54,611 [INFO] ui.assertions (assertions.py:150): ✅ URL 包含: 'login'
+2026-11-18 16:48:54,611 [INFO] ui.pages.login_page (login_page.py:102): ✅ 仍在登录页
+2026-11-18 16:48:54,613 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#password
+2026-11-18 16:48:54,825 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-btn-primary
+2026-11-18 16:48:55,343 [INFO] ui.pages.login_page (login_page.py:110): ✅ 已离开登录页: http://10.200.15.3/
+2026-11-18 16:48:55,345 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#loginId
+2026-11-18 16:48:55,346 [INFO] ui.assertions (assertions.py:82): ✅ 登录表单 已隐藏
+2026-11-18 16:48:55,355 [INFO] conftest (conftest.py:370): ✅ 测试结束: test_login_retry_after_failure[login_retry_after_failure]
+2026-11-18 16:48:55,363 [INFO] conftest (conftest.py:359): ============================================================
+2026-11-18 16:48:55,364 [INFO] conftest (conftest.py:360): 🧪 开始测试: test_account_id_matches_login_user[personal_center_account_id]
+2026-11-18 16:48:55,364 [INFO] conftest (conftest.py:362):    描述: 验证：个人中心页面展示的账号 id 与登录使用的账号一致
+2026-11-18 16:48:55,507 [INFO] ui.browser (browser.py:125): 新页面已创建，viewport=None
+2026-11-18 16:48:55,507 [INFO] ui.pages.base_page (base_page.py:69): 导航到: http://10.200.15.3/login
+2026-11-18 16:48:56,568 [INFO] ui.pages.login_page (login_page.py:75): 登录操作: username=admin_01
+2026-11-18 16:48:56,598 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#loginId
+2026-11-18 16:48:56,815 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=#password
+2026-11-18 16:48:57,026 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.ant-btn-primary
+2026-11-18 16:48:59,178 [INFO] ui.assertions (assertions.py:150): ✅ URL 包含: 'home'
+2026-11-18 16:48:59,180 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.avatar-content
+2026-11-18 16:48:59,182 [INFO] ui.assertions (assertions.py:72): ✅ 右上角头像 可见
+2026-11-18 16:48:59,182 [INFO] ui.pages.home_page (home_page.py:61): ✅ 已进入首页
+2026-11-18 16:48:59,182 [INFO] ui.pages.home_page (home_page.py:47): hover 右上角头像，触发账号下拉
+2026-11-18 16:48:59,184 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.avatar-content
+2026-11-18 16:48:59,440 [DEBUG] ui.locator (locator.py:104): 定位元素: by=css, value=.avatar-dropdown-wrapper
+2026-11-18 16:48:59,442 [INFO] ui.assertions (assertions.py:72): ✅ 账号下拉菜单 可见
+2026-11-18 16:48:59,442 [DEBUG] ui.locator (locator.py:104): 定位元素: by=text, value=个人中心
+2026-11-18 16:48:59,444 [INFO] ui.assertions (assertions.py:72): ✅ 菜单项-个人中心 可见
+2026-11-18 16:48:59,445 [INFO] ui.pages.home_page (home_page.py:53): 点击菜单项: 个人中心
+2026-11-18 16:48:59,445 [DEBUG] ui.locator (locator.py:104): 定位元素: by=text, value=个人中心
+2026-11-18 16:49:00,228 [INFO] ui.assertions (assertions.py:150): ✅ URL 包含: 'account/settings'
+2026-11-18 16:49:00,228 [INFO] ui.pages.personal_center_page (personal_center_page.py:41): ✅ 已进入个人中心页面
+2026-11-18 16:49:00,406 [DEBUG] ui.locator (locator.py:104): 定位元素: by=xpath, value=//span[contains(@class,'ant-descriptions-item-label')][normalize-space()='账号']/following-sibling::span[contains(@class,'ant-descriptions-item-content')]
+2026-11-18 16:49:00,439 [INFO] ui.assertions (assertions.py:114): ✅ 个人中心账号id 文本匹配: 'admin_01'
+2026-11-18 16:49:00,440 [INFO] ui.pages.personal_center_page (personal_center_page.py:52): ✅ 账号 id 与登录账号一致: admin_01
+2026-11-18 16:49:00,457 [INFO] conftest (conftest.py:370): ✅ 测试结束: test_account_id_matches_login_user[personal_center_account_id]
+2026-11-18 16:49:00,724 [INFO] ui.browser (browser.py:155): 浏览器资源已释放
+2026-11-18 16:49:00,733 [INFO] conftest (conftest.py:191): 🏁 测试会话结束 — 退出码: 0
+2026-11-18 16:49:00,733 [INFO] conftest (conftest.py:219): ⏭️ 已跳过 Allure 报告生成（--no-report）

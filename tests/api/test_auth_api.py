@@ -19,8 +19,8 @@ from utils.logger import get_logger
 
 logger = get_logger(__name__)
 
-# 参数化数据集（从 data/test_data.yaml 读取，模块导入期加载）
-API_LOGIN_CASES = load_test_data("api_login_cases")
+# 参数化数据集（从 data/test_auth_api_data.yaml 读取，模块导入期加载）
+API_LOGIN_CASES = load_test_data("test_auth_api", "api_login_cases")
 
 
 @allure.feature("认证模块")

@@ -13,7 +13,6 @@
 import os
 import subprocess
 import sys
-import yaml
 from datetime import datetime
 from pathlib import Path
 from typing import Optional
@@ -72,18 +71,6 @@ def api_client() -> ApiClient:
 def auth_api(api_client: ApiClient) -> AuthApi:
     """创建认证 API 封装对象（所有测试可见）"""
     return AuthApi(api_client)
-
-
-@pytest.fixture
-def test_data() -> dict:
-    """
-    加载测试数据文件（data/test_data.yaml）
-    """
-    data_path = settings.project_root / "data" / "test_data.yaml"
-    if data_path.exists():
-        with open(data_path, "r", encoding="utf-8") as f:
-            return yaml.safe_load(f) or {}
-    return {}
 
 
 # ============================================================
@@ -226,6 +213,12 @@ def _generate_allure_report() -> Optional[Path]:
     Returns:
         报告目录路径，失败返回 None
     """
+    # run.py --no-report 通过环境变量 HERMES_SKIP_REPORT=1 跳过报告链路；
+    # 返回 None 后 pytest_sessionfinish 会继续跳过元数据保存与仪表盘更新
+    if os.environ.get("HERMES_SKIP_REPORT") == "1":
+        logger.info("⏭️ 已跳过 Allure 报告生成（--no-report）")
+        return None
+
     allure_results_dir = settings.get_report_dir()
     if not allure_results_dir.exists() or not list(allure_results_dir.iterdir()):
         logger.warning("Allure 结果目录为空，跳过报告生成: %s", allure_results_dir)

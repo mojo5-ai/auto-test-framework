@@ -14,6 +14,7 @@
 """
 
 from typing import Optional
+import re
 from urllib.parse import urlparse
 
 from playwright.sync_api import Page, expect
@@ -145,7 +146,7 @@ class Assertions:
     def url_contains(self, expected_part: str):
         """断言当前 URL 包含特定路径/参数"""
         try:
-            expect(self._page).to_have_url(urlpattern=expected_part)
+            expect(self._page).to_have_url(re.compile(f".*{re.escape(expected_part)}.*"))
             logger.info("✅ URL 包含: '%s'", expected_part)
         except AssertionError:
             self._on_failure(f"URL 应包含'{expected_part}'，实际 URL: {self._page.url}")

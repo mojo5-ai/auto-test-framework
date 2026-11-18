@@ -1,0 +1,13 @@
+# 测试数据：tests/integration/test_login_flow.py
+# 由 utils.helpers.load_test_data("test_login_flow", section) 读取
+
+# 集成测试：登录页面空值校验用例
+integration_login_cases:
+  - id: empty_username_and_password
+    username: ""
+    password: ""
+    desc: "空用户名和密码"
+  - id: empty_password
+    username: "admin"
+    password: ""
+    desc: "空密码"
