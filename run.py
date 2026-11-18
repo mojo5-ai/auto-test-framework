@@ -22,6 +22,18 @@ from pathlib import Path
 PROJECT_ROOT = Path(__file__).parent
 
 
+def _ensure_utf8_console():
+    """Windows：控制台切到 65001，避免 UTF-8 输出在 GBK(936) 终端乱码"""
+    if sys.platform != "win32":
+        return
+    try:
+        import ctypes
+        ctypes.windll.kernel32.SetConsoleOutputCP(65001)
+        ctypes.windll.kernel32.SetConsoleCP(65001)
+    except Exception:
+        pass
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="自动化测试入口 — 执行测试 → 生成报告 → 更新仪表盘",
@@ -122,6 +134,7 @@ def open_report():
 
 
 def main():
+    _ensure_utf8_console()
     args = parse_args()
     pytest_cmd = build_pytest_args(args)
 

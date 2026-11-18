@@ -10,10 +10,11 @@
 - 🔄 **环境切换** — 通过 `--env dev|staging|prod` 一行切换目标环境
 - 📊 **Allure 报告** — 自动生成 HTML 报告 + 历史趋势仪表盘
 - 📸 **失败截图** — UI 测试失败时自动截图并附加到报告
-- 🎲 **数据驱动** — 支持 YAML 数据文件 + Faker 动态生成测试数据
+- 🎲 **数据驱动** — 测试数据集中在 `data/test_data.yaml`，通过 `pytest.mark.parametrize` 参数化注入用例（`utils.helpers.load_test_data()` 在模块导入期读取）；另支持 Faker 动态生成数据
 - 🏷️ **标记体系** — `smoke / regression / api / ui / integration` 灵活筛选
 - ⚡ **并行执行** — 集成 pytest-xdist，大幅缩短运行时间
-- 📝 **全局日志** — 统一日志格式，控制台与文件双输出
+- ⏳ **快速等待策略** — 导航用 `domcontentloaded` 即载即用（弃 networkidle）、元素超时 10s 快速失败、断言单次轮询（login 页单用例约 1s）
+- 📝 **全局日志** — 统一日志格式，控制台与文件双输出；Windows 下自动切换 UTF-8 控制台（65001），中文/emoji 不再乱码
 
 ---
 
@@ -60,16 +61,18 @@ auto-test-framework/
 │   └── settings.py         #   Pydantic Settings 加载器
 ├── utils/                  # 工具库
 │   ├── logger.py           #   日志
-│   ├── helpers.py          #   通用函数
+│   ├── helpers.py          #   通用函数（含 load_test_data 参数化数据读取）
 │   ├── data_generator.py   #   测试数据生成
 │   ├── allure_report.py    #   Allure 辅助
 │   └── report_dashboard.py #   仪表盘生成
-├── data/                   # 测试数据（YAML）
+├── data/
+│   └── test_data.yaml      # 测试数据 + 参数化数据集（id/desc/预期结果）
 ├── reports/                # 测试产物（自动生成）
 │   ├── allure-results/     #   Allure 原始结果
 │   ├── allure-reports/     #   Allure HTML 报告（按时间戳）
 │   ├── dashboard/          #   历史仪表盘
 │   ├── screenshots/        #   UI 失败截图
+│   ├── dashboard-optimization-plans.md  # 仪表盘优化计划归档
 │   └── test.log            #   运行日志
 ├── conftest.py             # 全局 pytest fixtures / hooks
 ├── run.py                  # 🚀 一键运行入口
@@ -95,7 +98,14 @@ python -m venv .venv
 pip install -r requirements.txt
 ```
 
-### 2. 安装浏览器（UI 测试需要）
+> ⚠️ **务必激活 venv 再运行**：本机已有 `venv\` 时执行 `. \venv\Scripts\Activate.ps1`。
+> 直接用裸 `pytest` 会走系统 Python，报 `ModuleNotFoundError: No module named 'pydantic_settings'`。
+
+### 2. 浏览器（UI 测试需要）
+
+框架默认通过 `channel="chrome"` 使用**系统安装的 Google Chrome**（`ui/browser.py`），通常无需额外操作。
+
+如需改用 Playwright 自带浏览器，删除 `BrowserManager(channel="chrome")` 的 channel 参数后执行：
 
 ```bash
 playwright install chromium
@@ -203,7 +213,7 @@ pytest -m "smoke or regression"        # 冒烟或回归
 base_url: "http://10.200.15.3/"
 
 api:
-  base_url: "http://10.200.15.3:10002/"
+  base_url: "http://10.200.15.3:80/"
   auth_prefix: "auth"
   timeout: 30              # HTTP 超时（秒）
   retry_times: 3           # 失败重试次数
@@ -213,10 +223,10 @@ ui:
   base_url: "http://10.200.15.3/"
   browser: "chromium"      # chromium / firefox / webkit
   headless: true           # 是否无头模式
-  timeout: 30000           # Playwright 超时（毫秒）
+  timeout: 10000           # 元素等待超时（毫秒），失败快速暴露
+  slow_mo: 200             # 操作间延迟（毫秒），仅 headed 模式生效
   viewport:
-    width: 1920
-    height: 1080
+    fullscreen: true       # headed 模式全屏；headless 回退 1920x1080 视口
 
 logging:
   level: "INFO"
@@ -252,38 +262,75 @@ report:
 
 ## 📝 编写新测试
 
-### API 测试示例
+### 1. 在 YAML 中定义参数化数据
+
+```yaml
+# data/test_data.yaml
+ui_login_boundary_cases:
+  - id: empty_username        # 生成测试 ID：test_login_xxx[empty_username]
+    username: ""
+    password: "password123"
+    expected_error: "账号"    # 页面真实提示：登录账号不能为空
+    desc: "空用户名"
+  - id: empty_password
+    username: "admin"
+    password: ""
+    expected_error: "密码"    # 页面真实提示：密码不能为空
+    desc: "空密码"
+```
+
+### 2. API 测试示例（参数化）
 
 ```python
 # tests/api/test_auth_api.py
+import allure
 import pytest
-from api.endpoints.auth_api import AuthAPI
+from api.endpoints.auth_api import AuthApi
+from utils.helpers import load_test_data
+
+API_LOGIN_CASES = load_test_data("api_login_cases")   # 模块导入期读取 YAML
 
 @pytest.mark.api
-class TestAuth:
-    def test_login_success(self, auth_api: AuthAPI):
-        resp = auth_api.login("admin", "123456")
-        assert resp.status_code == 200
-        assert "token" in resp.json()
+class TestLoginApi:
+    @pytest.mark.parametrize("case", API_LOGIN_CASES, ids=lambda c: c["id"])
+    def test_login_boundary_values(self, auth_api: AuthApi, case: dict):
+        result = auth_api.login(case["username"], case["password"])
+        assert "success" in result
+        if case["expect_fail"] is True:
+            assert result["success"] is False
 ```
 
-### UI 测试示例（Page Object）
+### 3. UI 测试示例（Page Object + 参数化）
 
 ```python
 # tests/ui/test_login.py
+import allure
 import pytest
+from ui.pages.login_page import LoginPage
+from utils.helpers import load_test_data
+
+UI_LOGIN_BOUNDARY_CASES = load_test_data("ui_login_boundary_cases")
 
 @pytest.mark.ui
-class TestLoginPage:
-    def test_login_page_loaded(self, login_page):
-        login_page.goto()
-        assert login_page.is_loaded()
-
-    def test_login_empty_password(self, login_page):
-        login_page.goto()
-        login_page.login("admin", "")
-        assert login_page.error_text_visible()
+class TestLoginFlow:
+    @pytest.mark.parametrize("case", UI_LOGIN_BOUNDARY_CASES, ids=lambda c: c["id"])
+    def test_login_boundary_values(self, login_page: LoginPage, case: dict):
+        allure.dynamic.title(f"登录边界值 - {case['desc']}")
+        with allure.step(f"场景: {case['desc']}"):
+            login_page.login(case["username"], case["password"])
+        with allure.step("验证校验提示"):
+            login_page.assert_login_failed(case.get("expected_error"))
 ```
+
+> 参数化数据需要在模块导入期拿到，因此不能用 fixture，统一通过 `load_test_data()` 读取；
+> fixture（如 `login_page`、`auth_api`）在根目录 `conftest.py` 中定义，测试函数按参数名直接注入。
+
+---
+
+## ⚠️ 已知限制
+
+- **记住密码用例已跳过**：登录页（凯越ERP）无"记住密码"复选框，`test_remember_me_checkbox` 标记 `skip`，待开发提供后恢复
+- **Page Object 选择器已按真实 DOM 核实**（2026-11-18）：`#loginId` / `#password` / `.ant-btn-primary` / `.ant-notification-notice`；页面无 data-testid，回退机制在 `_FALLBACK` 中维护
 
 ---
 
@@ -291,7 +338,7 @@ class TestLoginPage:
 
 - 禁止将真实的账号密码、API Token 写入测试代码或配置文件
 - 敏感信息统一从环境变量读取，配置文件中仅放占位符
-- `.gitignore` 已覆盖 `__pycache__/`、`.pytest_cache/`、`node_modules/`、`allure-reports/results/`、`.idea/` 等
+- `.gitignore` 已覆盖 `__pycache__/`、`.pytest_cache/`、`venv/`、`reports/`、`node_modules/`、`.idea/`、`.vscode/` 等
 
 ---
 

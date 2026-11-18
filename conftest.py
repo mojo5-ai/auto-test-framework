@@ -12,6 +12,8 @@
 
 import os
 import subprocess
+import sys
+import yaml
 from datetime import datetime
 from pathlib import Path
 from typing import Optional
@@ -19,10 +21,110 @@ from typing import Optional
 import allure
 import pytest
 
+from api.client import ApiClient
+from api.endpoints.auth_api import AuthApi
 from config.settings import settings
+from ui.browser import BrowserManager
+from ui.pages.login_page import LoginPage
 from utils.logger import get_logger
 
 logger = get_logger(__name__)
+
+
+def _ensure_utf8_console():
+    """
+    Windows：将控制台代码页切到 65001（UTF-8）。
+
+    背景：系统默认代码页 936（GBK），而本项目输出为 UTF-8
+    （logger 控制台 handler 与 PYTHONUTF8 环境均为 UTF-8），
+    UTF-8 字节在 936 控制台上按 GBK 渲染会导致中文/emoji 乱码。
+    管道/重定向场景下该设置无副作用；失败时静默忽略。
+    """
+    if sys.platform != "win32":
+        return
+    try:
+        import ctypes
+        ctypes.windll.kernel32.SetConsoleOutputCP(65001)
+        ctypes.windll.kernel32.SetConsoleCP(65001)
+    except Exception:
+        pass
+
+
+_ensure_utf8_console()
+
+
+# ============================================================
+#  共享 fixtures（对所有测试可见，包括 API / UI / 集成）
+# ============================================================
+
+@pytest.fixture(scope="session")
+def api_client() -> ApiClient:
+    """
+    创建 API 客户端（会话级，所有测试共享）
+    复用连接池，提高测试效率
+    """
+    client = ApiClient()
+    yield client
+    client.close()
+
+
+@pytest.fixture(scope="session")
+def auth_api(api_client: ApiClient) -> AuthApi:
+    """创建认证 API 封装对象（所有测试可见）"""
+    return AuthApi(api_client)
+
+
+@pytest.fixture
+def test_data() -> dict:
+    """
+    加载测试数据文件（data/test_data.yaml）
+    """
+    data_path = settings.project_root / "data" / "test_data.yaml"
+    if data_path.exists():
+        with open(data_path, "r", encoding="utf-8") as f:
+            return yaml.safe_load(f) or {}
+    return {}
+
+
+# ============================================================
+#  UI 层 fixtures（对所有测试可见，包括集成测试）
+# ============================================================
+
+@pytest.fixture(scope="session")
+def browser_manager():
+    """
+    浏览器管理器（会话级）
+    整个测试会话只启动一次浏览器
+    """
+    with BrowserManager() as mgr:
+        yield mgr
+
+
+@pytest.fixture
+def page(browser_manager: BrowserManager):
+    """
+    每个测试用例创建独立的页面
+    测试结束后自动关闭，保证用例隔离
+    """
+    p = browser_manager.new_page()
+    yield p
+    p.close()
+
+
+@pytest.fixture
+def login_page(page) -> LoginPage:
+    """创建登录页面对象并导航"""
+    return LoginPage(page).open()
+
+
+@pytest.fixture
+def test_config() -> dict:
+    """UI 测试配置（从全局配置读取）"""
+    return {
+        "base_url": settings.ui.base_url,
+        "timeout": settings.ui.timeout,
+        "browser": settings.ui.browser,
+    }
 
 
 # ============================================================
@@ -305,10 +407,8 @@ def pytest_configure(config):
     """根据 --env 参数加载对应配置，设置 Allure 输出目录"""
     env = config.getvalue("env")
     settings.env = env
-    # 重新加载配置
-    from config.settings import Settings
-    new_settings = Settings.load_from_yaml()
-    settings.__dict__.update(new_settings.__dict__)
+    # 重新加载配置（原地刷新字段，保持模块级 settings 引用不变）
+    settings.reload()
 
     # 设置 Allure 结果输出目录（与 settings.get_report_dir() 保持一致）
     allure_dir = settings.get_report_dir()

@@ -28,6 +28,7 @@
 from typing import Optional
 
 from api.client import ApiClient
+from api.models.user import LoginResponse
 from utils.logger import get_logger
 
 logger = get_logger(__name__)
@@ -74,10 +75,19 @@ class AuthApi:
         if not isinstance(data, dict):
             return {"success": False, "message": "响应格式异常", "raw": str(data)[:200]}
 
+        # 用 pydantic 模型校验响应结构，结构异常时记录警告但继续处理
+        try:
+            parsed = LoginResponse(**data)
+        except Exception as e:
+            logger.warning("登录响应结构与模型不匹配: %s", e)
+            parsed = None
+
         # API 响应检查
         if data.get("success") is True:
             token = None
-            if isinstance(data.get("data"), dict):
+            if parsed and parsed.data:
+                token = parsed.data.accessToken
+            elif isinstance(data.get("data"), dict):
                 token = data["data"].get("accessToken")
             result = {
                 "success": True,
@@ -89,8 +99,8 @@ class AuthApi:
             return result
 
         # 登录失败
-        error_msg = data.get("errorMsg", "登录失败")
-        error_code = data.get("errorCode", "")
+        error_msg = (parsed.errorMsg if parsed else None) or data.get("errorMsg", "登录失败")
+        error_code = (parsed.errorCode if parsed else None) or data.get("errorCode", "")
         logger.warning("登录失败 [%s]: %s", error_code, error_msg)
         return {
             "success": False,

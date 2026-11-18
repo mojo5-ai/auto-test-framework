@@ -67,19 +67,21 @@ class BasePage:
         target = path or self.PAGE_PATH
         full_url = f"{settings.ui.base_url.rstrip('/')}/{target.lstrip('/')}"
         logger.info("导航到: %s", full_url)
-        self.page.goto(full_url, wait_until="networkidle")
+        # domcontentloaded：SPA 秒开即可操作；networkidle 实测慢 60 倍（4.8s vs 0.08s），
+        # 且轮询/长连接页面可能永远不静默，元素就绪由 fill()/断言的自动等待兜底
+        self.page.goto(full_url, wait_until="domcontentloaded")
         return self
 
     def refresh(self) -> "BasePage":
         """刷新当前页面"""
         logger.info("刷新页面: %s", self.page.url)
-        self.page.reload(wait_until="networkidle")
+        self.page.reload(wait_until="domcontentloaded")
         return self
 
     def wait_for_load(self, timeout: Optional[int] = None) -> "BasePage":
-        """等待页面完全加载"""
+        """等待页面加载完成（DOM 加载即返回，业务结果由断言显式等待）"""
         timeout = timeout or settings.ui.timeout
-        self.page.wait_for_load_state("networkidle", timeout=timeout)
+        self.page.wait_for_load_state("load", timeout=timeout)
         return self
 
     def take_screenshot(self, name: str = "") -> str:
@@ -94,7 +96,7 @@ class BasePage:
         """
         from ui.browser import BrowserManager
         screenshot_name = name or self.__class__.__name__
-        path = BrowserManager().take_screenshot(self.page, screenshot_name)
+        path = BrowserManager.take_screenshot(self.page, screenshot_name)
         return str(path)
 
     def get_page_title(self) -> str:

@@ -43,7 +43,13 @@ def get_logger(name: str = __name__) -> logging.Logger:
     logger.setLevel(logging.DEBUG)
 
     # --- 控制台 Handler（INFO 级别） ---
-    console_handler = logging.StreamHandler(sys.stdout)
+    # 显式指定 utf-8，避免 Windows 默认 GBK 编码无法输出 emoji/中文
+    try:
+        import io as _io
+        _stdout = _io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
+        console_handler = logging.StreamHandler(_stdout)
+    except Exception:
+        console_handler = logging.StreamHandler(sys.stdout)
     console_handler.setLevel(getattr(logging, settings.logging.level.upper(), logging.INFO))
     console_fmt = logging.Formatter(
         "%(asctime)s [%(levelname)s] %(name)s: %(message)s",

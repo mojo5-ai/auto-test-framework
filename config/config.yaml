@@ -5,7 +5,7 @@ base_url: "http://10.200.15.3/"
 
 # API 相关配置
 api:
-  base_url: "http://10.200.15.3:10002/"
+  base_url: "http://10.200.15.3:80/"
   auth_prefix: "auth"
   timeout: 30
   retry_times: 3
@@ -16,10 +16,12 @@ ui:
   base_url: "http://10.200.15.3/"
   browser: "chromium"
   headless: true
-  timeout: 30000
+  timeout: 10000  # 元素等待超时（毫秒）：失败快速暴露，避免每步干等 30s
+  slow_mo: 200  # 操作间延迟（毫秒），仅 headed 模式生效
   viewport:
-    width: 1920
-    height: 1080
+    fullscreen: true
+    # width: 1920
+    # height: 1080
 
 # 日志配置
 logging:

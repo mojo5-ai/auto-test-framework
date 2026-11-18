@@ -34,6 +34,8 @@ class ViewportConfig(BaseModel):
     """浏览器视口配置"""
     width: int = 1920
     height: int = 1080
+    # headed 模式下启动全屏（headless 无窗口概念，回退到 width×height）
+    fullscreen: bool = True
 
 
 class UiConfig(BaseModel):
@@ -42,6 +44,8 @@ class UiConfig(BaseModel):
     browser: str = "chromium"
     headless: bool = True
     timeout: int = 30000
+    # 操作间延迟（毫秒），仅 headed 模式生效，便于观察；headless 下应设为 0
+    slow_mo: int = 0
     viewport: ViewportConfig = ViewportConfig()
 
 
@@ -100,6 +104,25 @@ class Settings(BaseSettings):
 
         # 递归合并 YAML 配置到默认值
         return cls(**raw)
+
+    def reload(self, yaml_path: Optional[Path] = None) -> "Settings":
+        """
+        重新加载配置（原地刷新当前单例的字段，保持模块级引用不变）
+
+        用于运行时切换环境（如 pytest --env）后重新读取 config.yaml。
+        不使用 __dict__.update 的 hack，而是通过 pydantic 重新校验后
+        逐个字段赋值，保证嵌套模型（如 ui.viewport）也是新的独立实例。
+
+        Args:
+            yaml_path: YAML 配置文件路径，默认使用 config/config.yaml
+
+        Returns:
+            self（当前实例，字段已刷新）
+        """
+        fresh = self.load_from_yaml(yaml_path)
+        for field_name in self.model_fields:
+            setattr(self, field_name, getattr(fresh, field_name))
+        return self
 
     def get_report_dir(self) -> Path:
         """获取 Allure 报告输出目录"""

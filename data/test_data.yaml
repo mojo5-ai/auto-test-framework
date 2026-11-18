@@ -25,7 +25,82 @@ users:
 login:
   valid:
     username: "admin"
-    password: "admin123"
+    password: "Mugroup123"
   invalid:
     username: "admin"
     password: "wrong_password"
+
+# ============================================================
+#  pytest.mark.parametrize 数据集
+#  由 utils.helpers.load_test_data 读取，每个用例的 id 用于生成测试 ID
+# ============================================================
+
+# UI 登录成功用例
+ui_login_valid_cases:
+  - id: valid_admin
+    username: "admin_01"
+    password: "Mugroup123"
+
+# UI 登录失败用例
+ui_login_invalid_cases:
+  - id: wrong_password
+    username: "admin"
+    password: "wrong_password"
+
+# UI 登录边界值用例
+ui_login_boundary_cases:
+  - id: empty_username
+    username: ""
+    password: "password123"
+    expected_error: "账号"   # 页面真实提示：登录账号不能为空
+    desc: "空用户名"
+  - id: empty_password
+    username: "admin"
+    password: ""
+    expected_error: "密码"   # 页面真实提示：密码不能为空
+    desc: "空密码"
+  - id: short_password
+    username: "admin"
+    password: "123"
+    expected_error: null      # 后端统一提示，不匹配具体文案
+    desc: "短密码"
+
+# API 登录参数化用例
+# expect_fail: true 断言失败；false 断言成功；null 仅验证响应结构（对照组）
+api_login_cases:
+  - id: empty_password
+    username: "admin"
+    password: ""
+    expect_fail: true
+    desc: "空密码"
+  - id: empty_username
+    username: ""
+    password: "admin123"
+    expect_fail: true
+    desc: "空用户名"
+  - id: wrong_password
+    username: "admin"
+    password: "wrong_password_123"
+    expect_fail: true
+    desc: "错误密码"
+  - id: nonexistent_user
+    username: "nonexistent_user"
+    password: "admin123"
+    expect_fail: true
+    desc: "不存在的用户"
+  - id: valid_credentials_contract
+    username: "admin_01"
+    password: "Mugroup123"
+    expect_fail: null
+    desc: "正确凭证（对照组，仅验证响应结构）"
+
+# 集成测试：登录页面空值校验用例
+integration_login_cases:
+  - id: empty_username_and_password
+    username: ""
+    password: ""
+    desc: "空用户名和密码"
+  - id: empty_password
+    username: "admin"
+    password: ""
+    desc: "空密码"

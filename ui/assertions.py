@@ -18,6 +18,7 @@ from urllib.parse import urlparse
 
 from playwright.sync_api import Page, expect
 
+from config.settings import settings
 from ui.locator import ElementLocator
 from utils.logger import get_logger
 
@@ -47,7 +48,7 @@ class Assertions:
         # 尝试截图
         try:
             from ui.browser import BrowserManager
-            screenshot_path = BrowserManager().take_screenshot(self._page, "assertion_failure")
+            screenshot_path = BrowserManager.take_screenshot(self._page, "assertion_failure")
             logger.info("  失败截图: %s", screenshot_path)
         except Exception:
             pass
@@ -64,8 +65,9 @@ class Assertions:
             desc: 元素描述（用于错误提示）
         """
         try:
-            locator = self._locator.wait_for_visible(value, by)
-            expect(locator).to_be_visible()
+            # 单次等待：expect 自带轮询，无需先 wait_for_visible 再 expect（失败路径会等两遍）
+            locator = self._locator.find(value, by)
+            expect(locator).to_be_visible(timeout=settings.ui.timeout)
             logger.info("✅ %s 可见", desc)
         except AssertionError:
             self._on_failure(f"{desc} 应该可见，但未找到或不可见 (by={by}, value={value})")

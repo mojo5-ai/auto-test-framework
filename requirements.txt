@@ -1,11 +1,12 @@
 # 混合自动化测试框架依赖
-pytest>=8.0
-pytest-xdist>=3.0          # 并行执行
-pytest-allure-adaptor>=1.7.10  # Allure 报告
-allure-pytest>=2.13.0      # Allure pytest 集成
-requests>=2.31.0           # HTTP 客户端
-playwright>=1.40.0         # 浏览器自动化
-pydantic>=2.0              # 数据模型与配置校验
-pydantic-settings>=2.0     # 配置管理
-pyyaml>=6.0                # YAML 配置解析
-faker>=20.0                # 测试数据生成
+# 版本下限为已验证的最低要求，括号内为当前 venv 实际安装版本（2026-11-18 核对）
+
+pytest>=8.0                 # 测试框架（9.2.0）
+pytest-xdist>=3.0           # 并行执行，如 -n 4（3.8.0）
+allure-pytest>=2.13.0       # Allure 报告 pytest 集成（2.16.2）
+requests>=2.31.0            # HTTP 客户端（2.34.2）
+playwright>=1.40.0          # 浏览器自动化，需另行 playwright install chromium（1.64.1）
+pydantic>=2.0               # 数据模型与配置校验（2.14.3）
+pydantic-settings>=2.0      # 多环境配置管理（2.16.2）
+pyyaml>=6.0                 # YAML 配置与测试数据解析（6.0.3）
+faker>=20.0                 # 动态测试数据生成，utils/data_generator.py 使用（40.44.0）

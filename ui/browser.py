@@ -41,7 +41,7 @@ class BrowserManager:
     def __init__(
         self,
         browser_type: Optional[str] = None,
-        headless: Optional[bool] = None,
+        headless: Optional[bool] = False,
         viewport: Optional[dict] = None,
         timeout: Optional[int] = None,
         channel: str = "chrome",  # 使用系统安装的 Chrome
@@ -57,9 +57,17 @@ class BrowserManager:
         ui_cfg = settings.ui
         self.browser_type = browser_type or ui_cfg.browser
         self.headless = headless if headless is not None else ui_cfg.headless
-        self.viewport = viewport or ui_cfg.viewport.model_dump()
+        # fullscreen 仅 headed 模式生效（headless 下无窗口，回退到 width×height 视口）
+        self.fullscreen = ui_cfg.viewport.fullscreen and not self.headless
+        self.viewport = (
+            viewport if viewport is not None
+            else None if self.fullscreen
+            else {"width": ui_cfg.viewport.width, "height": ui_cfg.viewport.height}
+        )
         self.timeout = timeout or ui_cfg.timeout
         self.channel = channel
+        # slow_mo 仅在 headed（有头）模式下生效，headless 下强制为 0 避免无意义等待
+        self.slow_mo = 0 if self.headless else ui_cfg.slow_mo
 
         self._playwright: Optional[Playwright] = None
         self._browser: Optional[Browser] = None
@@ -79,8 +87,10 @@ class BrowserManager:
 
         launch_kwargs = {
             "headless": self.headless,
-            "slow_mo": 200,  # 操作间延迟，让测试更稳定
+            "slow_mo": self.slow_mo,  # 操作间延迟，仅 headed 模式生效
         }
+        if self.fullscreen:
+            launch_kwargs["args"] = ["--start-fullscreen"]
 
         # 使用系统 Chrome（如果指定了 channel）
         if self.channel and self.browser_type == "chromium":
@@ -115,9 +125,10 @@ class BrowserManager:
         logger.info("新页面已创建，viewport=%s", self.viewport)
         return page
 
-    def take_screenshot(self, page: Page, name: str = "screenshot") -> Path:
+    @staticmethod
+    def take_screenshot(page: Page, name: str = "screenshot") -> Path:
         """
-        页面截图
+        页面截图（静态方法，无需实例化 BrowserManager）
 
         Args:
             page: Playwright Page 对象

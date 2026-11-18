@@ -15,14 +15,19 @@ import pytest
 
 from api.endpoints.auth_api import AuthApi
 from ui.pages.login_page import LoginPage
+from utils.helpers import load_test_data
 from utils.logger import get_logger
 
 logger = get_logger(__name__)
+
+# 参数化数据集（从 data/test_data.yaml 读取，模块导入期加载）
+INTEGRATION_LOGIN_CASES = load_test_data("integration_login_cases")
 
 
 @allure.feature("登录全流程")
 @allure.story("API + UI 集成")
 @allure.severity(allure.severity_level.CRITICAL)
+@pytest.mark.integration
 class TestLoginFullFlow:
 
     @allure.title("登录 API 接口验证")
@@ -53,24 +58,27 @@ class TestLoginFullFlow:
         """
         with allure.step("验证登录页面关键元素"):
             login_page.assert_that.element_visible(
-                login_page._username_input, desc="用户名输入框"
+                login_page._resolve(login_page._username_input), desc="用户名输入框"
             )
             login_page.assert_that.element_visible(
-                login_page._password_input, desc="密码输入框"
+                login_page._resolve(login_page._password_input), desc="密码输入框"
             )
             login_page.assert_that.element_visible(
-                login_page._login_button, desc="登录按钮"
+                login_page._resolve(login_page._login_button), desc="登录按钮"
             )
 
-    @allure.title("登录 UI 交互 - 空用户名校验")
-    def test_login_empty_ui(self, login_page: LoginPage):
+    @allure.title("登录 UI 交互 - 空值校验")
+    @pytest.mark.parametrize("case", INTEGRATION_LOGIN_CASES, ids=lambda c: c["id"])
+    def test_login_empty_ui(self, login_page: LoginPage, case: dict):
         """
         验证：点击登录按钮时，空用户名/密码的校验提示
         """
-        with allure.step("不输入用户名密码直接登录"):
-            login_page.login("", "")
+        allure.dynamic.title(f"登录 UI 交互 - {case['desc']}")
+
+        with allure.step(f"场景: {case['desc']}"):
+            login_page.login(case["username"], case["password"])
 
         with allure.step("验证校验提示"):
             login_page.assert_that.element_visible(
-                login_page._error_message, desc="错误提示"
+                login_page._resolve(login_page._error_message), desc="错误提示"
             )

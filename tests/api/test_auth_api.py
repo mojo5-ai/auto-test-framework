@@ -14,14 +14,19 @@ import allure
 import pytest
 
 from api.endpoints.auth_api import AuthApi
+from utils.helpers import load_test_data
 from utils.logger import get_logger
 
 logger = get_logger(__name__)
+
+# 参数化数据集（从 data/test_data.yaml 读取，模块导入期加载）
+API_LOGIN_CASES = load_test_data("api_login_cases")
 
 
 @allure.feature("认证模块")
 @allure.story("登录接口")
 @allure.severity(allure.severity_level.BLOCKER)
+@pytest.mark.api
 class TestLoginApi:
 
     @allure.title("登录接口可达性测试")
@@ -64,32 +69,36 @@ class TestLoginApi:
             assert result["message"], "错误信息不应为空"
             logger.info("错误提示: %s", result["message"])
 
-    @allure.title("登录 - 空密码")
-    def test_login_empty_password(self, auth_api: AuthApi):
-        """验证：空密码应返回校验提示"""
-        with allure.step("使用空密码"):
-            result = auth_api.login("admin", "")
+    @allure.title("登录 - 边界值参数化测试")
+    @pytest.mark.parametrize("case", API_LOGIN_CASES, ids=lambda c: c["id"])
+    def test_login_boundary_values(self, auth_api: AuthApi, case: dict):
+        """参数化验证：各种边界凭证下登录接口的行为"""
+        username, password = case["username"], case["password"]
+        expect_fail, desc = case["expect_fail"], case["desc"]
+        allure.dynamic.title(f"登录边界值 - {desc}")
 
-        with allure.step("验证校验结果"):
-            # 系统对空密码的校验结果
+        with allure.step(f"场景: {desc} — username={username!r}, password={password!r}"):
+            result = auth_api.login(username, password)
+
+        with allure.step("验证响应结构"):
+            assert "success" in result, "响应缺少 success 字段"
+            assert isinstance(result["success"], bool), "success 应为布尔值"
+
+        with allure.step(f"验证成功状态 (expect_fail={expect_fail})"):
+            if expect_fail is True:
+                assert result["success"] is False, f"{desc} 应返回失败"
+            elif expect_fail is False:
+                assert result["success"] is True, f"{desc} 应返回成功"
+            # expect_fail is None（对照组）：不断言具体成败，只验证接口正常响应
             allure.attach(
                 f"success={result['success']}, message={result['message']}",
-                name="空密码结果",
+                name=f"{desc} 结果",
             )
-
-    @allure.title("登录 - 空用户名")
-    def test_login_empty_username(self, auth_api: AuthApi):
-        """验证：空用户名应返回校验提示"""
-        with allure.step("使用空用户名"):
-            result = auth_api.login("", "admin123")
-
-        with allure.step("验证校验结果"):
-            assert result["success"] is False, "空用户名应返回失败"
-            logger.info("空用户名提示: %s", result["message"])
 
 
 @allure.feature("认证模块")
 @allure.story("用户信息接口")
+@pytest.mark.api
 class TestUserInfo:
 
     @allure.title("获取用户信息 - 未登录")

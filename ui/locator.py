@@ -19,6 +19,7 @@ from typing import Literal, Optional
 from playwright.sync_api import Locator as PlaywrightLocator, Page
 
 from utils.logger import get_logger
+from config.settings import settings
 
 logger = get_logger(__name__)
 
@@ -79,7 +80,9 @@ class ElementLocator:
             # 按 XPath 定位
             find("//button[@type='submit']", by="xpath")
         """
-        timeout = timeout or self._page.context.timeout
+        # BrowserContext 没有 timeout 属性，默认超时从配置读取
+        # （browser.py 启动时已通过 context.set_default_timeout 设置）
+        timeout = timeout or settings.ui.timeout
 
         locator_methods = {
             "css": self._page.locator,

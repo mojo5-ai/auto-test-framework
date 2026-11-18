@@ -1,46 +1,6 @@
 """
-API 测试 fixtures
+API 测试 fixtures（已迁移至项目根目录 conftest.py）
 
-提供 API 测试所需的共享 fixture：
-- api_client: API 客户端实例
-- auth_api: 认证 API 封装
-- test_data: 测试数据加载
+api_client / auth_api / test_data 三个 fixture 已提升到根目录 conftest.py，
+这样集成测试和 UI 测试也能使用。本文件保留为空，避免重复定义。
 """
-
-import pytest
-import yaml
-from pathlib import Path
-
-from api.client import ApiClient
-from api.endpoints.auth_api import AuthApi
-from config.settings import settings
-
-
-@pytest.fixture(scope="session")
-def api_client() -> ApiClient:
-    """
-    创建 API 客户端（会话级，所有测试共享）
-    复用连接池，提高测试效率
-    """
-    client = ApiClient()
-    yield client
-    client.close()
-
-
-@pytest.fixture(scope="session")
-def auth_api(api_client: ApiClient) -> AuthApi:
-    """创建认证 API 封装对象"""
-    return AuthApi(api_client)
-
-
-@pytest.fixture
-def test_data() -> dict:
-    """
-    加载测试数据文件
-    数据存放在 data/test_data.yaml
-    """
-    data_path = settings.project_root / "data" / "test_data.yaml"
-    if data_path.exists():
-        with open(data_path, "r", encoding="utf-8") as f:
-            return yaml.safe_load(f) or {}
-    return {}

@@ -42,3 +42,22 @@ class ApiResponse(BaseModel):
     code: int = Field(0, description="业务状态码，0 表示成功")
     message: str = Field("success", description="业务消息")
     data: Optional[dict | list] = Field(None, description="响应数据")
+
+
+class LoginData(BaseModel):
+    """登录成功返回的 data 字段"""
+    accessToken: Optional[str] = Field(None, description="访问令牌")
+
+
+class LoginResponse(BaseModel):
+    """
+    登录接口响应模型
+
+    真实接口结构：
+      成功: {"success": true, "data": {"accessToken": "xxx"}, "errorCode": null, "errorMsg": null}
+      失败: {"success": false, "errorCode": 200101, "errorMsg": "登录失败...", "data": null}
+    """
+    success: bool = Field(..., description="是否成功")
+    data: Optional[LoginData] = Field(None, description="响应数据")
+    errorCode: Optional[int | str] = Field(None, description="错误码")
+    errorMsg: Optional[str] = Field(None, description="错误信息")

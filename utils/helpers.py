@@ -13,9 +13,51 @@ import string
 import time
 from typing import Any, Callable, Optional, Type
 
+import yaml
+
 from utils.logger import get_logger
 
 logger = get_logger(__name__)
+
+
+def load_test_data(section: Optional[str] = None) -> Any:
+    """
+    读取 data/test_data.yaml 中的测试数据
+
+    主要用于 pytest.mark.parametrize：参数化需要在模块导入期拿到数据，
+    不能依赖 fixture，因此提供该函数在模块级读取。
+
+    Args:
+        section: 顶层数据键，如 "ui_login_boundary_cases"；
+                 None 时返回整个数据字典
+
+    Returns:
+        指定 section 的数据（通常是 list[dict]），不存在时返回空列表/空字典
+
+    Usage:
+        from utils.helpers import load_test_data
+
+        CASES = load_test_data("ui_login_boundary_cases")
+
+        @pytest.mark.parametrize("case", CASES, ids=lambda c: c["id"])
+        def test_xxx(case):
+            ...
+    """
+    # 延迟导入，避免模块级循环依赖
+    from config.settings import settings
+
+    data_path = settings.project_root / "data" / "test_data.yaml"
+    empty: Any = {} if section is None else []
+    if not data_path.exists():
+        logger.warning("测试数据文件不存在: %s", data_path)
+        return empty
+
+    with open(data_path, "r", encoding="utf-8") as f:
+        data = yaml.safe_load(f) or {}
+
+    if section is None:
+        return data
+    return data.get(section, empty)
 
 
 def random_str(length: int = 8, prefix: str = "") -> str:
@@ -73,9 +115,8 @@ def retry(
                             func.__name__, attempt, e, interval,
                         )
                         time.sleep(interval)
-            raise RuntimeError(
-                f"{func.__name__} 重试 {max_times} 次后仍然失败"
-            ) from last_exc
+            # 保留原始异常类型，便于调用方区分是网络问题还是业务异常
+            raise last_exc
         return wrapper
     return decorator
 

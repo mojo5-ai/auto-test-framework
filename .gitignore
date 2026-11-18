@@ -8,6 +8,11 @@ dist/
 build/
 .eggs/
 
+# 虚拟环境
+venv/
+env/
+.venv/
+
 # Pytest
 .pytest_cache/
 
@@ -17,9 +22,9 @@ build/
 *.swp
 *.swo
 
-# Allure reports (generated)
-reports/allure-reports/
-reports/allure-results/
+# 测试与报告（运行产物）
+reports/
+*.log
 
 # Node.js dependencies
 node_modules/
@@ -28,6 +33,12 @@ package-lock.json
 # Hermes local config
 .hermes/
 
+# 环境变量与本地配置
+.env
+.env.local
+config/config.local.yaml
+
 # OS
 .DS_Store
 Thumbs.db
+desktop.ini
